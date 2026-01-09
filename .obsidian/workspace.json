@@ -201,16 +201,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "f4f887e455cdbf0a",
+  "active": "8b2e8d230ee7de33",
   "lastOpenFiles": [
-    "03 API's/Diseño y Documentación de API’s.md",
+    "Welcome.md",
     "_sidebar.md",
+    "README.md",
+    "03 API's/Diseño y Documentación de API’s.md",
     "03 API's/Diseño y Documentación de API's.md",
     "01 Generalidades/Stack Tecnologico.md",
     "01 Generalidades/Situación actual.md",
     "01 Generalidades/Archivos Clave.md",
     "01 Generalidades/Descripción General de Arquitectura.md",
-    "Welcome.md",
     "04 Código",
     "03 API's",
     "02 Requerimientos",
