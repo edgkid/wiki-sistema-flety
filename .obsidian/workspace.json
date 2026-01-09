@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f4f887e455cdbf0a",
+            "id": "68f71eb5bc954fb3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Código/Services.md",
+                "file": "04 Código/Trip Service.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Services"
-            }
-          },
-          {
-            "id": "ba64c77449fa5765",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04 Código/Services.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Services"
+              "title": "Trip Service"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,10 +183,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "ba64c77449fa5765",
+  "active": "68f71eb5bc954fb3",
   "lastOpenFiles": [
-    "04 Código/Trip Service.md",
     "04 Código/Services.md",
+    "04 Código/Trip Service.md",
     "_sidebar.md",
     "Pasted image 20260109103242.png",
     "README.md",
