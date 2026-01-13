@@ -1,4 +1,5 @@
-Descripción del servicio: Este servicio centraliza la lógica de filtrado y búsqueda . aqui se construyen objetos de búsqueda dinámicos (`$match` para agregaciones de MongoDB), manejando búsquedas por nombres y haciendo uso de expresiones regulares, estados de pago y tipos de usuario.
+Descripción del servicio: 
+Servicio encargado de centraliza la lógica de filtrado y búsqueda . aqui se construyen objetos de búsqueda dinámicos (`$match` para agregaciones de MongoDB), manejando búsquedas por nombres y haciendo uso de expresiones regulares, estados de pago y tipos de usuario.
 
 ### Función: handleSearch (Sync)
 

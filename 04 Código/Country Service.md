@@ -1,5 +1,5 @@
 Descripción del servicio:
-Esta clase se encarga de gestionar la lógica de negocio relacionada con las entidades de **Países (Country)** y su relación con las **Ciudades (City)**. Actúa como intermediaria entre los modelos de Mongoose y los controladores, facilitando la obtención de datos filtrados y la agregación de información geográfica.
+Servicio encardo de gestionar la lógica de negocio relacionada con las entidades de **Países (Country)** y su relación con las **Ciudades (City)**. Actúa como intermediaria entre los modelos de Mongoose y los controladores, facilitando la obtención de datos filtrados y la agregación de información geográfica.
 
 ### Función: getCityListCountries (Async)
 
