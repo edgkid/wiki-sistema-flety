@@ -4,7 +4,6 @@ Bienvenido a la documentación oficial del **Sistema Flety**. Aquí encontrarás
 
 ### 📌 Acceso Rápido
 * Utiliza el **menú lateral izquierdo** para navegar por las secciones.
-* Si no ves el menú, haz clic en las **tres rayitas** abajo a la izquierda.
 
 ---
 *Última actualización: 9 de enero de 2026*
