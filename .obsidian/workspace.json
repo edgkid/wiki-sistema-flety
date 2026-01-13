@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Código/Trip Service.md",
+                "file": "04 Código/Country Service.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Trip Service"
+              "title": "Country Service"
             }
           }
         ]
@@ -185,6 +185,9 @@
   },
   "active": "64cf8bcde8b0588b",
   "lastOpenFiles": [
+    "04 Código/Trip Service.md",
+    "04 Código/Country Service.md",
+    "04 Código/Services.md",
     "03 API's/Login Swagger.md",
     "02 Casos de uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso.md",
@@ -194,9 +197,7 @@
     "Casos de Uso - Usuarios.md",
     "02 Casos de uso",
     "03 API's/Login Swagger.md.md",
-    "04 Código/Services.md",
     "README.md",
-    "04 Código/Trip Service.md",
     "Welcome.md",
     "Pasted image 20260109103242.png",
     "04 Código",
