@@ -215,11 +215,11 @@ Este modelo define la estructura de zonas dentro de la plataforma y permite que 
 **Descripción:**
 Este modelo representa una entidad para la gestión de tarifas planas. 
 
-| Campo | Tipo | Default | Descripción |
-| :--- | :--- | :--- | :--- |
-| `city_id` | ObjectId | - | Referencia al identificador único de la ciudad. |
-| `airport_id` | ObjectId | - | Referencia al identificador único del aeropuerto. |
-| `price` | Number | 0 | Precio del trayecto o servicio entre el aeropuerto y la ciudad. |
-| `service_type_id` | ObjectId | - | Referencia al tipo de servicio asociado (ej: estándar, lujo, etc.). |
-| `created_at` | Date | Date.now | Fecha y hora en la que se creó el registro de vinculación. |
-| `updated_at` | Date | Date.now | Fecha y hora de la última actualización del registro. |
+| Campo             | Tipo     | Default  | Descripción                                                         |
+| :---------------- | :------- | :------- | :------------------------------------------------------------------ |
+| `city_id`         | ObjectId | -        | Referencia al identificador único de la ciudad.                     |
+| `airport_id`      | ObjectId | -        | Referencia al identificador único del aeropuerto.                   |
+| `price`           | Number   | 0        | Precio del trayecto o servicio entre el aeropuerto y la ciudad.     |
+| `service_type_id` | ObjectId | -        | Referencia al tipo de servicio asociado (ej: estándar, lujo, etc.). |
+| `created_at`      | Date     | Date.now | Fecha y hora en la que se creó el registro de vinculación.          |
+| `updated_at`      | Date     | Date.now | Fecha y hora de la última actualización del registro.               |
