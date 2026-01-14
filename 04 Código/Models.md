@@ -277,30 +277,151 @@ Este modelo representa los la entidad de método  vinculados a los usuarios.
 **Descripción:**
 Este modelo gestiona la entidad de ciudades. la información presente  permite determinar;  qué métodos de pago están permitidos y qué tipos de servicios están activos.
 
-| Campo | Tipo | Default | Descripción |
-| :--- | :--- | :--- | :--- |
-| `countryid` | ObjectId | - | Referencia al modelo Country. |
-| `countryname` | String | "" | Nombre del país al que pertenece la ciudad. |
-| `cityname` | String | "" | Nombre corto de la ciudad. |
-| `full_cityname` | String | "" | Nombre completo (incluyendo estado/provincia). |
-| `timezone` | String | "" | Zona horaria específica de la ciudad. |
-| `is_use_city_boundary` | Boolean | false | Indica si se debe validar que el viaje esté dentro de los límites. |
-| `city_locations` | Array | [] | Coordenadas que definen el polígono de la ciudad (Index 3D). |
-| `cityLatLong` | [Number] | - | Coordenadas centrales (Lat/Long) para geolocalización (Index 2D). |
-| `cityRadius` | Number | 50 | Radio operativo en kilómetros desde el centro. |
-| `unit` | Number | 1 | Unidad de medida (1: Millas, 2: Kilómetros). |
-| `isBusiness` | Number | 1 | Indica si la ciudad está activa para el negocio globalmente. |
-| `city_business` | Number | 1 | Flag para habilitar operaciones estándar en la ciudad. |
-| `airport_business` | Number | 1 | Flag para habilitar servicios desde/hacia aeropuertos. |
-| `zone_business` | Number | 1 | Flag para habilitar servicios por zonas específicas. |
-| `is_payment_mode_cash` | Number | 1 | Permite pagos en efectivo en esta ciudad (1: Sí, 0: No). |
-| `is_payment_mode_card` | Number | 1 | Permite pagos con tarjeta en esta ciudad. |
-| `is_payment_mode_apple_pay` | Number | 0 | Permite Apple Pay. |
-| `isPromoApplyForCash` | Number | 1 | Permite usar códigos promocionales en viajes en efectivo. |
-| `isPromoApplyForCard` | Number | 1 | Permite usar códigos promocionales en viajes con tarjeta. |
-| `destination_city` | [ObjectId] | [] | Lista de IDs de otras ciudades permitidas como destino. |
-| `is_ask_user_for_fixed_fare` | Boolean | false | Pregunta al usuario si desea una tarifa fija antes de pedir. |
-| `is_caracas` | Boolean | false | Flag específico para lógica personalizada en la ciudad de Caracas. |
-| `main_city` | Number | - | Identificador de jerarquía si la ciudad es una capital o principal. |
-| `created_at` | Date | Date.now | Fecha de creación del registro. |
-| `updated_at` | Date | Date.now | Fecha de la última actualización. |
+| Campo                        | Tipo       | Default  | Descripción                                                         |
+| :--------------------------- | :--------- | :------- | :------------------------------------------------------------------ |
+| `countryid`                  | ObjectId   | -        | Referencia al modelo Country.                                       |
+| `countryname`                | String     | ""       | Nombre del país al que pertenece la ciudad.                         |
+| `cityname`                   | String     | ""       | Nombre corto de la ciudad.                                          |
+| `full_cityname`              | String     | ""       | Nombre completo (incluyendo estado/provincia).                      |
+| `timezone`                   | String     | ""       | Zona horaria específica de la ciudad.                               |
+| `is_use_city_boundary`       | Boolean    | false    | Indica si se debe validar que el viaje esté dentro de los límites.  |
+| `city_locations`             | Array      | []       | Coordenadas que definen el polígono de la ciudad (Index 3D).        |
+| `cityLatLong`                | [Number]   | -        | Coordenadas centrales (Lat/Long) para geolocalización (Index 2D).   |
+| `cityRadius`                 | Number     | 50       | Radio operativo en kilómetros desde el centro.                      |
+| `unit`                       | Number     | 1        | Unidad de medida (1: Millas, 2: Kilómetros).                        |
+| `isBusiness`                 | Number     | 1        | Indica si la ciudad está activa para el negocio globalmente.        |
+| `city_business`              | Number     | 1        | Flag para habilitar operaciones estándar en la ciudad.              |
+| `airport_business`           | Number     | 1        | Flag para habilitar servicios desde/hacia aeropuertos.              |
+| `zone_business`              | Number     | 1        | Flag para habilitar servicios por zonas específicas.                |
+| `is_payment_mode_cash`       | Number     | 1        | Permite pagos en efectivo en esta ciudad (1: Sí, 0: No).            |
+| `is_payment_mode_card`       | Number     | 1        | Permite pagos con tarjeta en esta ciudad.                           |
+| `is_payment_mode_apple_pay`  | Number     | 0        | Permite Apple Pay.                                                  |
+| `isPromoApplyForCash`        | Number     | 1        | Permite usar códigos promocionales en viajes en efectivo.           |
+| `isPromoApplyForCard`        | Number     | 1        | Permite usar códigos promocionales en viajes con tarjeta.           |
+| `destination_city`           | [ObjectId] | []       | Lista de IDs de otras ciudades permitidas como destino.             |
+| `is_ask_user_for_fixed_fare` | Boolean    | false    | Pregunta al usuario si desea una tarifa fija antes de pedir.        |
+| `is_caracas`                 | Boolean    | false    | Flag específico para lógica personalizada en la ciudad de Caracas.  |
+| `main_city`                  | Number     | -        | Identificador de jerarquía si la ciudad es una capital o principal. |
+| `created_at`                 | Date       | Date.now | Fecha de creación del registro.                                     |
+| `updated_at`                 | Date       | Date.now | Fecha de la última actualización.                                   |
+### Modelo - City_To_City.js
+
+**Descripción:**
+Este modelo funciona como una matriz de tarifas para viajes **interurbanos**. Mediante el presente modelo se puede definir un precio fijo para trayectos que conectan una ciudad de origen con una ciudad de destino específica
+
+| Campo                 | Tipo     | Default  | Descripción                                      |
+| :-------------------- | :------- | :------- | :----------------------------------------------- |
+| `city_id`             | ObjectId | -        |                                                  |
+| `destination_city_id` | ObjectId | -        |                                                  |
+| `price`               | Number   | 0        | Tarifa plana asignada al trayecto entre ciudades |
+| `service_type_id`     | ObjectId | -        | Referencia al modelo Service_Type                |
+| `created_at`          | Date     | Date.now | Fecha de creación                                |
+| `updated_at`          | Date     | Date.now | Fecha de la última actualización                 |
+### Modelo - City_Type.js
+
+**Descripción:**
+Este modelo permite definir la configuración de precios para un tipo de servicio  dentro de una ciudad determinada.
+
+| Campo                                     | Tipo              | Default  | Descripción                                                        |
+| :---------------------------------------- | :---------------- | :------- | :----------------------------------------------------------------- |
+| `countryid` / `countryname`               | ObjectId / String | ""       | Referencia al País de operación                                    |
+| `cityid` / `city_id` / `cityname`         | ObjectId / String | ""       | Referencia a la Ciudad donde aplica esta configuración de precios. |
+| `typeid` / `typename`                     | ObjectId / String | ""       | Referencia al Tipo de Servicio                                     |
+| `type_image`                              | String            | ""       | URL del icono o imagen del vehículo                                |
+| `is_hide`                                 | Number            | 1        | Determina si el tipo de servicio es visible para los usuarios      |
+| `is_business`                             | Number            | 1        | Flag de activación .                                               |
+| `base_price`                              | Number            | 0        | Costo inicial fijo                                                 |
+| `base_price_distance`                     | Number            | 0        | Distancia incluida dentro del precio base.                         |
+| `base_price_time`                         | Number            | 0        | Tiempo incluido en precio base.                                    |
+| `min_fare`                                | Number            | 0        | Tarifa mínima                                                      |
+| `price_per_unit_distance`                 | Number            | 0        | Precio por unidad de distancia adicional.                          |
+| `price_for_total_time`                    | Number            | 0        | Precio por minuto de duración del viaje.                           |
+| `tax` / `user_tax` / `provider_tax`       | Number            | 0        | Porcentajes de impuestos aplicables                                |
+| `provider_profit`                         | Number            | 0        | Margen de ganancia para el conductor.                              |
+| `max_space`                               | Number            | 0        | Capacidad máxima de carga                                          |
+| `cancellation_fee`                        | Number            | 0        | Cargo por cancelación de viaje.                                    |
+| `is_surge_hours`                          | Number            | 0        | Activa el multiplicador por alta demanda                           |
+| `surge_multiplier`                        | Number            | 0        |                                                                    |
+| `surge_hours`                             | Array             | [...]    |                                                                    |
+| `is_zone` / `zone_ids`                    | Number / Array    | 0 / []   | Define si el precio es por zonas                                   |
+| `is_ride_share`                           | Number            | 0        | Habilita la modalidad de viaje compartido                          |
+| `is_car_rental_business`                  | Number            | 0        |                                                                    |
+| `car_rental_ids`                          | Array[ObjectId]   | []       |                                                                    |
+| `waiting_time_start_after_minute`         | Number            | 0        |                                                                    |
+| `price_for_waiting_time`                  | Number            | 0        | Costo por minuto de espera                                         |
+| `waiting_time_multiple_stops`             | Number            | 0        |                                                                    |
+| `price_for_waiting_time_multiple_stops`   | Number            | 0        |                                                                    |
+| `model_type`                              | Number            | 0        |                                                                    |
+| `cost_per_helper`                         | Number            | 0        |                                                                    |
+| `cost_per_stop_inside_city`               | Number            | 0        | Cargo por parada adicional                                         |
+| `cost_per_stop_outside_city`              | Number            | 0        | Cargo por parada adicional                                         |
+| `free_stops`                              | Number            | 2        | Cantidad de paradas incluidas sin costo extra.                     |
+| `cost_travel_insurance`                   | Number            | 0        | Costo del seguro de viaje/carga.                                   |
+| `fixed_fees`                              | Number            | 0        | Cargos administrativos fijos                                       |
+| `night_shift`                             | Number            | 0        | Recargo por horario nocturno.                                      |
+| `ferry_ticket_price` / `ferry_flety_cost` | Number            | -        | Costos asociados a traslados en Ferry.                             |
+| `boat_ticket`                             | Number            | 0        |                                                                    |
+| `ti_internal_transit`                     | Number            | -        | Tarifa de tránsito interno                                         |
+| `user_type` / `user_type_id`              | Number / ObjectId | 0        |                                                                    |
+| `corporate_partner_profit_fees`           | Number            | -        | Comisión                                                           |
+| `created_at` / `updated_at`               | Date              | Date.now | fecha de registro y fecha de actualización                         |
+### Modelo - City_Zone.js
+
+**Descripción:**
+Este modelo representa la entidad permite definir áreas de alta demanda, zonas de recargo o áreas con reglas de despacho específicas. 
+
+| Campo                          | Tipo            | Descripción                                                 |
+| :----------------------------- | :-------------- | :---------------------------------------------------------- |
+| `cityid`                       | ObjectId        | Referencia al modelo **City**                               |
+| `cityname`                     | String          | Nombre de la ciudad                                         |
+| `title`                        | String          | Nombre identificador de la zona                             |
+| `kmlzone`                      | Array           |                                                             |
+| `total_provider_in_zone_queue` | Array[ObjectId] | Lista  de proveedoresque están en espera dentro de una zona |
+| `description`                  | String          | Notas adicionales sobre la zona                             |
+| `styleUrl`                     | String          |                                                             |
+| `styleHash`                    | String          |                                                             |
+| `stroke`                       | String          |                                                             |
+| `stroke_opacity`               | Number          |                                                             |
+| `stroke_width`                 | Number          |                                                             |
+| `fill`                         | String          |                                                             |
+| `fill_opacity`                 | Number          |                                                             |
+| `created_at`                   | Date            | Fecha de creación del registro.                             |
+| `updated_at`                   | Date            | Fecha de la última modificación.                            |
+### Modelo - Corporate.js
+
+**Descripción:**
+Este modelo representa permite la personalización de servicios
+
+| Campo                          | Tipo              | Descripción                                                              |
+| :----------------------------- | :---------------- | :----------------------------------------------------------------------- |
+| `unique_id`                    | Number            | identificador de registro                                                |
+| `company_name`                 | String            | Nombre  o razón social de la empresa.                                    |
+| `rif`                          | String            | Registro de Información Fiscal                                           |
+| `name`                         | String            | Nombre del contacto principal o administrador de la cuenta corporativa.  |
+| `email`                        | String            | Correo electrónico corporativo                                           |
+| `password`                     | String            | Contraseña                                                               |
+| `country_phone_code` / `phone` | String            | Código de país y número telefónico principal.                            |
+| `alt_phone`                    | String            | Número telefónico alternativo.                                           |
+| `address`                      | String            | Dirección.                                                               |
+| `country_id` / `country_name`  | ObjectId / String |                                                                          |
+| `wallet`                       | Number            | Saldo disponible en la billetera corporativa                             |
+| `wallet_currency_code`         | String            | Moneda en la que se gestiona la billetera                                |
+| `is_approved`                  | Number            | Estado de verificación por el Admin                                      |
+| `token`                        | String            | Token de sesión para autenticación en paneles web.                       |
+| `refferal_code`                | String            | Código único para el sistema de referidos.                               |
+| `is_own_service_type`          | Number            |                                                                          |
+| `picture` / `rif_url`          | String            | URLs de imagen de perfil y documento RIF digitalizado.                   |
+| `document_2`                   | String            | URL del Acta o Documento Constitutivo (PDF).                             |
+| `is_trip_approve`              | Number            |                                                                          |
+| `is_subcorporate_admin`        | Number            | Define si la entidad tiene permisos de administración sobre sub-cuentas. |
+| `corporate_type_id`            | ObjectId          |                                                                          |
+| `corporate_type_userid`        | ObjectId          |                                                                          |
+| `url_array`                    | Array             | Lista de rutas y permisos de acceso                                      |
+| `active_api` / `api_key`       | Boolean / String  | Habilita el acceso vía API y almacena la llave de integración.           |
+| `is_hide_amount`               | Number            | Flag para ocultar montos de facturación                                  |
+| `preliquidation`               | Number            | Configuración para procesos de cierre de facturación anticipada.         |
+| `is_use_fixed_partner_profit`  | Number            | Determina si usa un margen de ganancia fijo                              |
+| `is_damasco`                   | Number            |                                                                          |
+| `allow_edit_trip`              | Number            | Permite o restringe la edición de datos de un viaje tras ser solicitado. |
+| `customer_id` / `account_id`   | String            | Referencias de pasarelas de pago                                         |
+| `created_at` / `updated_at`    | Date              | Marcas de tiempo de creación y última actualización.                     |
