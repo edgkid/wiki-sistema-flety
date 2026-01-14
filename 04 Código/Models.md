@@ -223,3 +223,84 @@ Este modelo representa una entidad para la gestión de tarifas planas.
 | `service_type_id` | ObjectId | -        | Referencia al tipo de servicio asociado (ej: estándar, lujo, etc.). |
 | `created_at`      | Date     | Date.now | Fecha y hora en la que se creó el registro de vinculación.          |
 | `updated_at`      | Date     | Date.now | Fecha y hora de la última actualización del registro.               |
+### Modelo - Api_Partners.js
+
+**Descripción:**
+Este modelo define la estructura encargada de soportar el acceso de terceros mediante API, a través de la vinculación de un tercero  con un token de autenticación único.
+
+| Campo       | Tipo     | Requerido | Descripción                                                              |
+| :---------- | :------- | :-------- | :----------------------------------------------------------------------- |
+| `_id`       | ObjectId | **Sí**    | Identificador único del registro                                         |
+| `name`      | String   | **Sí**    | Nombre identificador de tercero                                          |
+| `token`     | String   | **Sí**    | Llave de acceso secreta y única para autenticar las peticiones a la API. |
+| `createdAt` | Date     | -         | Fecha de creación del registro                                           |
+| `updatedAt` | Date     | -         | Fecha de la última modificación                                          |
+### Modelo - Bank_Detail.js
+
+**Descripción:**
+Este modelo define la estructura para almacenar información alusiva a banca.
+
+| Campo                      | Tipo     | Descripción                                       |
+| :------------------------- | :------- | :------------------------------------------------ |
+| `bank_holder_type`         | Number   | Define  dueño de la cuenta                        |
+| `bank_holder_id`           | ObjectId | Referencia al ID del modelo correspondiente       |
+| `unique_id`                | Number   | Identificador numérico incremental                |
+| `bank_name`                | String   | Nombre de la institución financiera.              |
+| `bank_branch`              | String   | Sucursal  bancaria donde está radicada la cuenta. |
+| `bank_account_number`      | String   | Número de cuenta bancaria.                        |
+| `bank_account_holder_name` | String   | Nombre del titular de la cuenta                   |
+| `bank_beneficiary_address` | String   | Dirección física del beneficiario                 |
+| `bank_unique_code`         | String   | Código de identificación bancaria nacional        |
+| `bank_swift_code`          | String   | Código internacional                              |
+| `is_updated`               | Number   |                                                   |
+| `created_at`               | Date     | Fecha de registro.                                |
+| `updated_at`               | Date     | Fecha de la última actualización.                 |
+### Modelo - Card.js
+
+**Descripción:**
+Este modelo representa los la entidad de método  vinculados a los usuarios. 
+
+| Campo                  | Tipo     | Default  | Descripción                                                                |
+| :--------------------- | :------- | :------- | :------------------------------------------------------------------------- |
+| `payment_method`       | String   | ""       | Token o ID del método de pago devuelto por la pasarela (ej: Stripe Token). |
+| `card_type`            | String   | ""       | Franquicia de la tarjeta (ej: Visa, MasterCard, American Express).         |
+| `user_id`              | ObjectId | -        | Referencia al ID del modelo User propietario de la tarjeta.                |
+| `last_four`            | String   | ""       | Los últimos 4 dígitos de la tarjeta para visualización segura.             |
+| `customer_id`          | String   | ""       | Identificador del cliente en la pasarela de pago (ej: Stripe Customer ID). |
+| `is_default`           | Number   | 0        | Flag para indicar si es la tarjeta principal (1 = Predeterminada, 0 = No). |
+| `payment_gateway_type` | Number   | 10       | Define la pasarela asociada (ej: 10 para Stripe, según Settings).          |
+| `type`                 | Number   | -        | Define el rol del dueño de la tarjeta (ej: Usuario o Proveedor).           |
+| `created_at`           | Date     | Date.now | Fecha de vinculación del método de pago.                                   |
+| `updated_at`           | Date     | Date.now | Fecha de la última actualización del registro.                             |
+### Modelo - City.js
+
+**Descripción:**
+Este modelo gestiona la entidad de ciudades. la información presente  permite determinar;  qué métodos de pago están permitidos y qué tipos de servicios están activos.
+
+| Campo | Tipo | Default | Descripción |
+| :--- | :--- | :--- | :--- |
+| `countryid` | ObjectId | - | Referencia al modelo Country. |
+| `countryname` | String | "" | Nombre del país al que pertenece la ciudad. |
+| `cityname` | String | "" | Nombre corto de la ciudad. |
+| `full_cityname` | String | "" | Nombre completo (incluyendo estado/provincia). |
+| `timezone` | String | "" | Zona horaria específica de la ciudad. |
+| `is_use_city_boundary` | Boolean | false | Indica si se debe validar que el viaje esté dentro de los límites. |
+| `city_locations` | Array | [] | Coordenadas que definen el polígono de la ciudad (Index 3D). |
+| `cityLatLong` | [Number] | - | Coordenadas centrales (Lat/Long) para geolocalización (Index 2D). |
+| `cityRadius` | Number | 50 | Radio operativo en kilómetros desde el centro. |
+| `unit` | Number | 1 | Unidad de medida (1: Millas, 2: Kilómetros). |
+| `isBusiness` | Number | 1 | Indica si la ciudad está activa para el negocio globalmente. |
+| `city_business` | Number | 1 | Flag para habilitar operaciones estándar en la ciudad. |
+| `airport_business` | Number | 1 | Flag para habilitar servicios desde/hacia aeropuertos. |
+| `zone_business` | Number | 1 | Flag para habilitar servicios por zonas específicas. |
+| `is_payment_mode_cash` | Number | 1 | Permite pagos en efectivo en esta ciudad (1: Sí, 0: No). |
+| `is_payment_mode_card` | Number | 1 | Permite pagos con tarjeta en esta ciudad. |
+| `is_payment_mode_apple_pay` | Number | 0 | Permite Apple Pay. |
+| `isPromoApplyForCash` | Number | 1 | Permite usar códigos promocionales en viajes en efectivo. |
+| `isPromoApplyForCard` | Number | 1 | Permite usar códigos promocionales en viajes con tarjeta. |
+| `destination_city` | [ObjectId] | [] | Lista de IDs de otras ciudades permitidas como destino. |
+| `is_ask_user_for_fixed_fare` | Boolean | false | Pregunta al usuario si desea una tarifa fija antes de pedir. |
+| `is_caracas` | Boolean | false | Flag específico para lógica personalizada en la ciudad de Caracas. |
+| `main_city` | Number | - | Identificador de jerarquía si la ciudad es una capital o principal. |
+| `created_at` | Date | Date.now | Fecha de creación del registro. |
+| `updated_at` | Date | Date.now | Fecha de la última actualización. |
