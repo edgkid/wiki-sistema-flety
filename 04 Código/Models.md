@@ -533,3 +533,65 @@ Este modelo almacena la estructura y el contenido de los correos electrónicos q
 | `emailAdminInfo`   | String   | ""      | Notas o descripción .                                          |
 | `countryName`      | String   | ""      | Nombre del país asociado a la plantilla                        |
 | `countryId`        | ObjectId | -       | Referencia al modelo **Country**                               |
+### Modelo - Emergency_Contact_Detail.js
+
+**Descripción:**
+Este modelo para soportar información de contactos de emergencia.
+
+| Campo                         | Tipo     | Default  | Descripción                                                                |
+| :---------------------------- | :------- | :------- | :------------------------------------------------------------------------- |
+| `user_id`                     | ObjectId | -        | Id                                                                         |
+| `name`                        | String   | ""       | Nombre                                                                     |
+| `phone`                       | String   | ""       | Número telefónico                                                          |
+| `is_always_share_ride_detail` | Number   | 0        | Flag para el envió del enlace de seguimiento de cada viaje a los contactos |
+| `created_at`                  | Date     | Date.now | Fecha de registro                                                          |
+| `updated_at`                  | Date     | Date.now | Fecha de la última actualización                                           |
+### Modelo - Ferry_Ticket.js
+
+**Descripción:**
+El modelo  registra la compra y validación de boletos de ferry necesarios para que un servicio complete una ruta. 
+
+| Campo             | Tipo     | Descripción                                                |
+| :---------------- | :------- | :--------------------------------------------------------- |
+| `unique_id`       | Number   | ID                                                         |
+| `user_id`         | ObjectId | Referencia al usuario                                      |
+| `user_type`       | Number   | Define el rol del usuario                                  |
+| `amount`          | Number   | Monto total cargado al sistema por el concepto del ticket. |
+| `ticket_cost`     | Number   | Valor nominal o costo real del ticket                      |
+| `corporate_id`    | ObjectId | Referencia a la empresa                                    |
+| `service_type_id` | ObjectId | Vinculación con el tipo de servicio                        |
+| `country_id`      | ObjectId | Referencia al país                                         |
+| `type_id`         | ObjectId | Referencia a `city_type`                                   |
+| `status`          | Number   | status                                                     |
+| `file_url`        | String   |                                                            |
+| `created_at`      | Date     | Fecha de creación                                          |
+| `updated_at`      | Date     | Fecha de la última                                         |
+### Modelo - Guest_Token.js
+
+**Descripción:**
+El modelo  permite la creación y validación de credenciales temporales. 
+
+| Campo         | Tipo    | Default  | Descripción                                               |
+| :------------ | :------ | :------- | :-------------------------------------------------------- |
+| `unique_id`   | Number  | -        | Id                                                        |
+| `token_name`  | String  | ""       | Etiqueta descriptiva del token                            |
+| `token_value` | String  | ""       | El valor alfanumérico del token                           |
+| `state`       | Boolean | true     | status                                                    |
+| `start_date`  | Date    | Date.now | Fecha a partir de la cual el token comienza a ser válido. |
+| `code_expiry` | Date    | Date.now | Fecha y hora exacta en la que el token expira             |
+| `created_at`  | Date    | Date.now | Fecha de creación del registro                            |
+| `updated_at`  | Date    | Date.now | Fecha de la última modificación.                          |
+### Modelo - Inbox_Notification.js
+
+**Descripción:**
+Este modelo almacena mensajes persistentes que el usuario puede leer en cualquier momento desde su centro de mensajes. 
+
+| Campo        | Tipo     | Descripción                            |
+| :----------- | :------- | :------------------------------------- |
+| `unique_id`  | Number   | ID                                     |
+| `title`      | String   | Encabezado o asunto de la notificación |
+| `message`    | String   | Contenido detallado del mensaje        |
+| `type`       | Number   |                                        |
+| `country_id` | ObjectId | Referencia al modelo **Country**       |
+| `created_at` | Date     | Fecha de creación                      |
+| `updated_at` | Date     | Fecha de la última actualización.      |
