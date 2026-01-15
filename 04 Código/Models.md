@@ -425,3 +425,111 @@ Este modelo representa permite la personalización de servicios
 | `allow_edit_trip`              | Number            | Permite o restringe la edición de datos de un viaje tras ser solicitado. |
 | `customer_id` / `account_id`   | String            | Referencias de pasarelas de pago                                         |
 | `created_at` / `updated_at`    | Date              | Marcas de tiempo de creación y última actualización.                     |
+### Modelo - Country.js
+
+**Descripción:**
+El modelo define la identidad del país (nombre, bandera, códigos), y las reglas de validación de teléfonos, la moneda de intercambio, las pasarelas de pago disponibles y las políticas de bonos o configuración de tarifas.
+
+| Campo                        | Tipo    | Default  | Descripción                                                        |
+| :--------------------------- | :------ | :------- | :----------------------------------------------------------------- |
+| `countryname`                | String  | ""       | Nombre oficial del país                                            |
+| `countrycode`                | String  | ""       | Código telefónico internacional                                    |
+| `alpha2`                     | String  | ""       | Código ISO del país                                                |
+| `currency`                   | String  | ""       | Nombre de la moneda local.                                         |
+| `currencycode`               | String  | ""       | Código internacional de la moneda.                                 |
+| `currencysign`               | String  | ""       | Símbolo gráfico de la moneda                                       |
+| `flag_url`                   | String  | ""       | URL de la imagen de la bandera nacional.                           |
+| `countrytimezone`            | String  | ""       | Zona horaria principal.                                            |
+| `country_all_timezone`       | Array   | []       | Lista de todas las zonas horarias que cubren el territorio.        |
+| `payment_gateways`           | Array   | []       | Lista de pasarelas de pago habilitadas                             |
+| `countryphonecode`           | String  | ""       | Código de área telefónico (                                        |
+| `isBusiness`                 | Number  | 1        | Define si el país está habilitado para operaciones                 |
+| `phone_number_min_length`    | Number  | 8        | Longitud mínima permitida para números telefónicos                 |
+| `phone_number_length`        | Number  | 10       | Longitud estándar/máxima para números telefónicos                  |
+| `is_referral`                | Boolean | true     | Habilita/Deshabilita el sistema de referidos                       |
+| `referral_bonus_to_user`     | Number  | 0        | Bono que recibe el usuario invitado.                               |
+| `bonus_to_userreferral`      | Number  | 0        | Bono que recibe el usuario que invita                              |
+| `is_provider_referral`       | Boolean | true     | Habilita/Deshabilita el sistema de referidos para **Proveedores**. |
+| `referral_bonus_to_provider` | Number  | 0        | Bono que recibe el proveedor invitado.                             |
+| `bonus_to_providerreferral`  | Number  | 0        | Bono que recibe el proveedor que invita.                           |
+| `default_selected`           | Boolean | false    | Determina si es el país seleccionado por defecto en el registro.   |
+| `is_auto_transfer`           | Boolean | true     | Habilita la transferencia automática de fondos a conductores.      |
+| `auto_transfer_day`          | Number  | 7        | Ciclo de días para transferencias automáticas                      |
+| `coordinates`                | Object  | -        | Coordenadas geográficas del país.                                  |
+| `daily_cron_date`            | Date    | -        | Fecha de la última ejecución de tareas programadas                 |
+| `created_at` / `updated_at`  | Date    | Date.now | Marcas de tiempo de creación y actualización de registro           |
+### Modelo - Country_Data.js
+
+**Descripción:**
+El modelo sustenta la información asociada a la lógica de negocio que sirve para poblar selectores, validar códigos de moneda y  proporcionar detalles sobre los desplazamientos de las zonas horarias.
+
+| Campo                    | Tipo    | Default | Descripción                                                           |
+| :----------------------- | :------ | :------ | :-------------------------------------------------------------------- |
+| `alpha2`                 | String  | ""      | Código ISO 3166-1 de 2 letras (ej: "US", "VE", "ES").                 |
+| `alpha3`                 | String  | ""      | Código ISO 3166-1 de 3 letras (ej: "USA", "VEN", "ESP").              |
+| `code`                   | String  | ""      | Código de identificación del país.                                    |
+| `currency_code`          | String  | ""      | Código internacional de la moneda                                     |
+| `decimals`               | Number  | 2       | Cantidad de decimales permitidos para la moneda del país              |
+| `name`                   | String  | ""      | Nombre del país.                                                      |
+| `sign`                   | String  | ""      | Símbolo de la moneda                                                  |
+| `timezones`              | Array   | -       | Zonas horaria                                                         |
+| `timezones_detail`       | Object  | -       | Objeto con metadatos zona horaria.                                    |
+| `key.rawOffsetInMinutes` | Number  | -       | Desplazamiento respecto al UTC expresado en minutos.                  |
+| `key.abbreviation`       | String  | -       | Abreviatura de la zona horaria (ej: "VET", "EST").                    |
+| `key.rawFormat`          | String  | -       | Formato legible del desplazamiento                                    |
+| `active`                 | Boolean | -       | Indica si este registro está disponible para ser usado en el sistema. |
+### Modelo - Dispatcher.js
+
+**Descripción:**
+El modelo con manejo de información para la lógica de  solicitudes de servicios, monitoreo de conductores y asignación de viajes 
+
+| Campo                   | Tipo              | Default  | Descripción                      |
+| :---------------------- | :---------------- | :------- | :------------------------------- |
+| `unique_id`             | Number            | -        | ID                               |
+| `first_name`            | String            | ""       | Nombre del operador              |
+| `last_name`             | String            | ""       | Apellido del operador            |
+| `email`                 | String            | ""       | Correo electrónico               |
+| `password`              | String            | ""       | Contraseña                       |
+| `token`                 | String            | ""       | Token de sesión                  |
+| `country_phone_code`    | String            | ""       | Código telefónico                |
+| `phone`                 | String            | ""       | Número de teléfono .             |
+| `country` / `countryid` | String / ObjectId | "" / -   | Nombre e ID del país             |
+| `city` / `cityid`       | String / ObjectId | "" / -   | Nombre e ID de la ciudad         |
+| `created_at`            | Date              | Date.now | Fecha de creación de registro    |
+| `updated_at`            | Date              | Date.now | Fecha de la última actualización |
+### Modelo - Documents.js
+
+**Descripción:**
+Este modelo no contiene los archivos subidos por los usuarios, define la **plantilla o regla** del documento requerido (ej: "Licencia de Conducir", "Seguro Vehicular"). Configura si el documento requiere fecha de vencimiento, código único o fecha de emisión para ser validado
+
+| Campo             | Tipo     | Default  | Descripción                                                                  |
+| :---------------- | :------- | :------- | :--------------------------------------------------------------------------- |
+| `unique_id`       | Number   | -        | id                                                                           |
+| `countryid`       | ObjectId | -        | Referencia al país donde este documento es obligatorio.                      |
+| `title`           | String   | ""       | Nombre del documento                                                         |
+| `type`            | Number   | 8        | Categoría interna del documento                                              |
+| `option`          | Number   | 0        | Obligatoriedad                                                               |
+| `expired_date`    | Date     | -        | Fecha de vencimiento                                                         |
+| `issue_date`      | Date     | Date.now | Fecha de emisión                                                             |
+| `is_issue_date`   | Boolean  | false    | Si es true, el sistema exigirá al usuario ingresar la fecha de emisión.      |
+| `is_degree`       | Boolean  | false    | Flag para indicar si el documento requiere un grado académico o profesional. |
+| `degree`          | String   | ""       |                                                                              |
+| `is_unique_code`  | Boolean  | false    | Si es true, el sistema exigirá un código alfanumérico                        |
+| `is_expired_date` | Boolean  | false    | Si es true, el sistema exigirá y validará una fecha de vencimiento futura.   |
+| `document_for`    | Number   | -        | **Destinatario**: 0 para Persona, 1 para el Vehículo.                        |
+| `created_at`      | Date     | Date.now | Fecha de creación de registro.                                               |
+| `updated_at`      | Date     | Date.now | Fecha de la última modificación                                              |
+### Modelo - Email_Deatil.js
+
+**Descripción:**
+Este modelo almacena la estructura y el contenido de los correos electrónicos que envía la plataforma.
+
+| Campo              | Tipo     | Default | Descripción                                                    |
+| :----------------- | :------- | :------ | :------------------------------------------------------------- |
+| `emailUniqueId`    | Number   | -       | Id                                                             |
+| `emailUniqueTitle` | String   | ""      | Nombre técnico de la plantilla de correo.                      |
+| `emailTitle`       | String   | ""      | El asunto (Subject) del correo que verá el destinatario final. |
+| `emailContent`     | String   | ""      | Cuerpo del mensaje.                                            |
+| `emailAdminInfo`   | String   | ""      | Notas o descripción .                                          |
+| `countryName`      | String   | ""      | Nombre del país asociado a la plantilla                        |
+| `countryId`        | ObjectId | -       | Referencia al modelo **Country**                               |
