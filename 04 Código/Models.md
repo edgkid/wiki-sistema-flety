@@ -821,3 +821,83 @@ Este modelo almacena los documentos de cada conductor.
 | is_document_expired | Boolean  | Estado dinámico que marca si el documento ya venció.             |
 | created_at          | Date     | Fecha de creación                                                |
 | updated_at          | Date     | Fecha de la última actualización                                 |
+### Modelo - Provider_Weekly_Earning.js
+
+**Descripción:**
+Este modelo actúa como el resumen consolidado de la semana de un conductor, aquí se permite calcular el balance  entre la ganancia del conductor y recaudado en efectivo.
+
+| Campo                         | Tipo     | Default | Descripción                                                        |
+| :---------------------------- | :------- | :------ | :----------------------------------------------------------------- |
+| `provider_id`                 | ObjectId | -       | Referencia al conductor                                            |
+| `provider_type`               | Number   | -       | Tipo de proveedor.                                                 |
+| `provider_type_id`            | ObjectId | -       | Referencia a la categoría de servicio del proveedor.               |
+| `statement_number`            | String   | ""      | Identificador único de la factura o estado de cuenta semanal.      |
+| `total_distance`              | Number   | 0       | Distancia total acumulada                                          |
+| `total_time`                  | Number   | 0       | Tiempo total acumulado en servicios activos.                       |
+| `total_waiting_time`          | Number   | 0       | Tiempo total de espera facturado en la semana.                     |
+| `total_service_fees`          | Number   | 0       | Suma de tarifas base semanales.                                    |
+| `total_service_surge_fees`    | Number   | 0       | Total generado por alta demanda                                    |
+| `total_service_tax_fees`      | Number   | 0       | Total de impuestos recaudados                                      |
+| `service_total`               | Number   | 0       | Subtotal bruto                                                     |
+| `promo_referral_amount`       | Number   | 0       |                                                                    |
+| `total`                       | Number   | 0       | Ingreso bruto total semanal                                        |
+| `total_card_payment`          | Number   | 0       | Pagos recibidos vía tarjeta                                        |
+| `total_cash_payment`          | Number   | 0       | Pagos recibidos en efectivo                                        |
+| `total_wallet_payment`        | Number   | 0       | Pagos realizados mediante billetera virtual.                       |
+| `total_provider_service_fees` | Number   | 0       | Ganancia neta final                                                |
+| `total_in_admin_currency`     | Number   | 0       |                                                                    |
+| `total_provider_have_cash`    | Number   | 0       | Monto total de efectivo                                            |
+| `total_pay_to_provider`       | Number   | 0       | **Monto Neto a Pagar**                                             |
+| `admin_paid`                  | Number   | 0       | Cantidad que el administrador ya ha transferido al conductor.      |
+| `remaining_amount_to_paid`    | Number   | 0       | Saldo restante por pagar para cerrar la semana.                    |
+| `date_tag`                    | String   | ""      |                                                                    |
+| `start_date_tag`              | String   | ""      | Fecha de inicio del ciclo semanal                                  |
+| `end_date_tag`                | String   | ""      | Fecha de fin del ciclo semanal                                     |
+| `start_date_server_timezone`  | Date     | -       |                                                                    |
+| `end_date_server_timezone`    | Date     | -       |                                                                    |
+| `provider_daily_earning_ids`  | Array    | []      | Referencia a los 7 registros de ProviderDailyEarning de la semana. |
+### Modelo - Provider.js
+
+**Descripción:**
+El modelo para manejar los datos de perfil del conductor.
+
+| Campo                          | Tipo            | Default  | Descripción                                                       |
+| :----------------------------- | :-------------- | :------- | :---------------------------------------------------------------- |
+| `provider_type`                | Number          | -        | Tipo proveedor                                                    |
+| `provider_type_id`             | ObjectId        | -        | ID de referencia  tipo  proveedor.                                |
+| `unique_id`                    | Number          | -        | ID                                                                |
+| `first_name`                   | String          | ""       | Nombre.                                                           |
+| `last_name`                    | String          | ""       | Apellido                                                          |
+| `email`                        | String          | ""       | Correo electrónico                                                |
+| `gender`                       | String          | ""       | Género                                                            |
+| `languages`                    | Array[ObjectId] | []       | Idiomas                                                           |
+| `wallet`                       | Number          | 0        | Saldo actual                                                      |
+| `wallet_currency_code`         | String          | ""       | Código de moneda                                                  |
+| `phone`                        | String          | ""       | Número de teléfono                                                |
+| `country_phone_code`           | String          | ""       | Prefijo telefónico internacional.                                 |
+| `password`                     | String          | ""       | Contraseña                                                        |
+| `picture`                      | String          | ""       | URL de la foto de perfil del conductor.                           |
+| `token`                        | String          | ""       | Token de sesión                                                   |
+| `is_available`                 | Number          | 0        | Estado de disponibilidad                                          |
+| `is_active`                    | Number          | 0        | Estado de conexión                                                |
+| `is_approved`                  | Number          | 0        |                                                                   |
+| `is_documents_expired`         | Boolean         | false    | vigencia de documento                                             |
+| `is_vehicle_document_uploaded` | Boolean         | false    | Indica si los documentos del vehículo asociado han sido cargados. |
+| `service_type`                 | ObjectId        | -        |                                                                   |
+| `car_model`                    | String          | ""       | Modelo del vehículo.                                              |
+| `car_number`                   | String          | ""       | Placa o matrícula del vehículo.                                   |
+| `device_token`                 | String          | ""       |                                                                   |
+| `device_type`                  | String          | ""       | Sistema operativo del dispositivo                                 |
+| `providerLocation`             | [Number]        | -        | Coordenadas geoespaciales actuales                                |
+| `address_location`             | [Number]        | -        | Coordenadas                                                       |
+| `rate`                         | Number          | 0        |                                                                   |
+| `rate_count`                   | Number          | 0        | Cantidad total de calificaciones recibidas.                       |
+| `referral_code`                | String          | ""       | Código único para invitar a otros conductores o usuarios.         |
+| `total_request`                | Number          | 0        | Total de solicitudes recibidas                                    |
+| `accepted_request`             | Number          | 0        | Cantidad total de viajes aceptados.                               |
+| `completed_request`            | Number          | 0        | Cantidad total de viajes finalizados con éxito.                   |
+| `cancelled_request`            | Number          | 0        | Cantidad total de viajes cancelados.                              |
+| `account_id` / `bank_id`       | String          | ""       | Información para la dispersión de pagos (Stripe/Banco).           |
+| `zone_queue_id`                | ObjectId        | -        | ID de la zona .                                                   |
+| `created_at`                   | Date            | Date.now | Fecha de registro                                                 |
+| `updated_at`                   | Date            | Date.now | Fecha de la última actualización                                  |
