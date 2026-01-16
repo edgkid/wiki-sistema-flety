@@ -697,3 +697,127 @@ El modelo que define el perfil del socio comercial. A diferencia de un conductor
 | `last_transferred_date`        | Date     | Date.now | Fecha de la última liquidación                          |
 | `created_at`                   | Date     | Date.now | Fecha de registro                                       |
 | `updated_at`                   | Date     | Date.now | Fecha de la última actualización                        |
+### Modelo - Payment_Transaction.js
+
+**Descripción:**
+Este modelo funge como motor de control para los pagos , almacena las llaves de la pasarela para esa transacción y mantiene el movimiento de dinero
+
+| Campo                      | Tipo    | Default  | Descripción                                                   |
+| :------------------------- | :------ | :------- | :------------------------------------------------------------ |
+| `stripe_public_key`        | String  | ""       | Llave pública de Stripe                                       |
+| `stripe_secret_key`        | String  | ""       | Llave secreta de Stripe .                                     |
+| `amount`                   | Number  | 0        | Monto total de la transacción.                                |
+| `currency_code`            | String  | ""       | Código de moneda                                              |
+| `is_schedule_payment`      | Boolean | true     |                                                               |
+| `is_payment_paid`          | Boolean | false    | Estatus del cobro                                             |
+| `no_of_failed_transaction` | Number  | 0        | Contador de cuántas veces ha fallado el intento de cobro.     |
+| `max_no_of_transaction`    | Number  | 0        | Límite máximo de reintentos permitidos                        |
+| `transaction_detail`       | Array   | []       |                                                               |
+| `card_detail`              | Array   | []       | Información  de la tarjeta utilizada para el pago.            |
+| `last_payment_date`        | Date    | -        | Fecha y hora en la que se realizó el último intento de cobro. |
+| `is_stop_system`           | Boolean | false    |                                                               |
+| `type_detail`              | Array   | []       | Información  sobre el origen del pago                         |
+| `created_at`               | Date    | Date.now | Fecha de creación                                             |
+| `updated_at`               | Date    | Date.now | Fecha de la última actualización                              |
+### Modelo - Promo_Code.js
+
+**Descripción:**
+El modelo permite manejar la información de los códigos promocionales,  lógica para limitar el número de usos totales, usos por usuario único, fechas de vigencia y restricciones por ciudad o tipo de servicio.
+
+| Campo                   | Tipo            | Default  | Descripción                                                      |
+| :---------------------- | :-------------- | :------- | :--------------------------------------------------------------- |
+| `promocode`             | String          | ""       | El código de promoción                                           |
+| `code_value`            | Number          | 0        | El valor del descuento a aplicar.                                |
+| `code_type`             | Number          | 0        | Tipo de descuento                                                |
+| `code_uses`             | Number          | 0        | Cantidad máxima de veces que el código puede ser usado           |
+| `user_used_promo`       | Number          | 0        | Contador total de cuántas veces se ha canjeado el código         |
+| `code_uses_per_user`    | Number          | 0        | Límite de veces que un mismo usuario puede utilizar este código. |
+| `state`                 | Number          | 0        | Estado del código                                                |
+| `completed_trips_type`  | Number          | 0        | Condición basada en viajes                                       |
+| `completed_trips_value` | Number          | 0        | Umbral de viajes completados para activar la promoción.          |
+| `countryid`             | ObjectId        | -        | Referencia de pais                                               |
+| `cityid`                | Array[ObjectId] | []       | Lista de ciudades                                                |
+| `serviceid`             | Array[ObjectId] | []       | Tipos de servicios.                                              |
+| `start_date`            | Date            | Date.now | Fecha a partir de la cual el código empieza a ser válido.        |
+| `code_expiry`           | Date            | Date.now | Fecha y hora de vencimiento                                      |
+| `created_at`            | Date            | Date.now | Fecha de creación                                                |
+| `updated_at`            | Date            | Date.now | Fecha de la última modificación                                  |
+### Modelo - Provider_Daily_Analytic.js
+
+**Descripción:**
+Este modelo almacena la actividad transaccional y de tiempo de un conductor en un periodo de tiempo, el modelo permite generar reportes.
+
+| Campo                  | Tipo     | Default  | Descripción                                                        |
+| :--------------------- | :------- | :------- | :----------------------------------------------------------------- |
+| `unique_id`            | Number   | -        | Id                                                                 |
+| `provider_id`          | ObjectId | -        | Referencia al conductor                                            |
+| `date_tag`             | String   | ""       | Etiqueta de fecha formateada                                       |
+| `date_server_timezone` | Date     | Date.now | Fecha del servidor en la que se registran los datos                |
+| `received`             | Number   | 0        | Total de solicitudes de viaje                                      |
+| `accepted`             | Number   | 0        | Cantidad de viajes que el conductor aceptó.                        |
+| `rejected`             | Number   | 0        | Cantidad de viajes que el conductor rechazó explícitamente.        |
+| `not_answered`         | Number   | 0        | Cantidad de solicitudes que expiraron sin respuesta del conductor. |
+| `cancelled`            | Number   | 0        | Viajes aceptados pero cancelados por el conductor.                 |
+| `completed`            | Number   | 0        | Cantidad de viajes finalizados exitosamente.                       |
+| `acception_ratio`      | Number   | 0        | Tasa de aceptación (Aceptados / Recibidos).                        |
+| `rejection_ratio`      | Number   | 0        | Tasa de rechazo (Rechazados / Recibidos).                          |
+| `cancellation_ratio`   | Number   | 0        | Tasa de cancelación (Cancelados / Aceptados).                      |
+| `completed_ratio`      | Number   | 0        | Tasa de finalización de viajes                                     |
+| `total_online_time`    | Number   | 0        | Tiempo total acumulado                                             |
+| `online_times`         | Array    | []       |                                                                    |
+| `created_at`           | Date     | Date.now | Fecha de creación                                                  |
+| `updated_at`           | Date     | Date.now | Fecha de la última actualización                                   |
+### Modelo - Provider_Daily_Earning.js
+
+**Descripción:**
+Este modelo almacena financieras de un conductor . 
+
+| Campo                         | Tipo     | Default  | Descripción                                           |
+| :---------------------------- | :------- | :------- | :---------------------------------------------------- |
+| `provider_id`                 | ObjectId | -        | Referencia al conductor                               |
+| `provider_type`               | Number   | -        | Identificador del tipo                                |
+| `provider_type_id`            | ObjectId | -        | Referencia a la categoría                             |
+| `statement_number`            | String   | ""       |                                                       |
+| `total_distance`              | Number   | 0        | Distancia total recorrida en el viaje                 |
+| `total_time`                  | Number   | 0        | Tiempo total transcurrido en el viaje                 |
+| `total_waiting_time`          | Number   | 0        | Tiempo total que el conductor cobró                   |
+| `total_service_fees`          | Number   | 0        | Suma de las tarifas base de los servicios realizados. |
+| `total_service_surge_fees`    | Number   | 0        | Ganancias extra por tarifa dinámica                   |
+| `total_service_tax_fees`      | Number   | 0        | Total de impuestos aplicados                          |
+| `service_total`               | Number   | 0        | Monto bruto generado por los servicios.               |
+| `promo_referral_amount`       | Number   | 0        | Incentivos ganados por uso de códigos promocionales   |
+| `total`                       | Number   | 0        | Ingreso total del día                                 |
+| `total_card_payment`          | Number   | 0        | Monto total recibido a través de tarjetas.            |
+| `total_cash_payment`          | Number   | 0        | Monto total recibido en efectivo.                     |
+| `total_wallet_payment`        | Number   | 0        | Monto total recibido desde la billetera               |
+| `total_provider_service_fees` | Number   | 0        | Ganancia final para el conductor.                     |
+| `total_in_admin_currency`     | Number   | 0        | Total diario en la moneda del                         |
+| `total_provider_have_cash`    | Number   | 0        | Dinero físico que el conductor devengo                |
+| `total_pay_to_provider`       | Number   | 0        | Saldo neto a transferir al conductor                  |
+| `date_tag`                    | String   | ""       | Etiqueta de fecha                                     |
+| `date_server_timezone`        | Date     | Date.now | Marca de tiempo                                       |
+| `provider_trip_earning_ids`   | Array    | []       | Lista de IDs de los viajes individuales               |
+### Modelo - Provider_Document.js
+
+**Descripción:**
+Este modelo almacena los documentos de cada conductor.
+
+| Campo               | Tipo     | Descripción                                                      |
+| ------------------- | -------- | ---------------------------------------------------------------- |
+| document_id         | ObjectId | Referencia al modelo Document                                    |
+| name                | String   | Nombre descriptivo del documento                                 |
+| provider_id         | ObjectId | Referencia al conductor .                                        |
+| option              | Number   | Define la obligatoriedad                                         |
+| document_picture    | String   | URL de archivo PDF almacenado en el servidor.                    |
+| is_uploaded         | Number   | Estado de la carga                                               |
+| unique_code         | String   | El número del documento                                          |
+| is_unique_code      | Boolean  | Flag qsi se requiere un código único.                            |
+| expired_date        | Date     | Fecha de vencimiento del documento                               |
+| issue_date          | Date     | Fecha en la que fue emitido el documento.                        |
+| is_issue_date       | Boolean  | Define la obligatoriedad                                         |
+| is_degree           | Boolean  | Indica si el documento valida un grado especial.                 |
+| degree              | String   | El grado asociado al documento.                                  |
+| is_expired_date     | Boolean  | Flag que indica si se requiere capturar la fecha de vencimiento. |
+| is_document_expired | Boolean  | Estado dinámico que marca si el documento ya venció.             |
+| created_at          | Date     | Fecha de creación                                                |
+| updated_at          | Date     | Fecha de la última actualización                                 |
