@@ -595,3 +595,105 @@ Este modelo almacena mensajes persistentes que el usuario puede leer en cualquie
 | `country_id` | ObjectId | Referencia al modelo **Country**       |
 | `created_at` | Date     | Fecha de creación                      |
 | `updated_at` | Date     | Fecha de la última actualización.      |
+### Modelo - Information.js
+
+**Descripción:**
+El modelo almacena datos que suelen ser consultados de forma recurrente en secciones como por ejemplo "Ayuda"
+
+| Campo         | Tipo   | Default  | Descripción                                |
+| :------------ | :----- | :------- | :----------------------------------------- |
+| `title`       | String | ""       | Título del artículo o sección informativa  |
+| `file`        | String | ""       | URL o ruta del archivo multimedia asociado |
+| `description` | String | ""       | Cuerpo del texto informativo               |
+| `created_at`  | Date   | Date.now | Fecha de creación del registro             |
+| `updated_at`  | Date   | Date.now | Fecha de la última actualización.          |
+### Modelo - Partner_Vehicle_Document.js
+
+**Descripción:**
+Este modelo almacena el _resultado_ la Documentación requerida para los vehículos subidos a la plataforma en cada servicio.
+
+| Campo                 | Tipo     | Default  | Descripción                                                                 |
+| :-------------------- | :------- | :------- | :-------------------------------------------------------------------------- |
+| `document_id`         | ObjectId | -        | Referencia al modelo **Document**                                           |
+| `vehicle_id`          | ObjectId | -        | Referencia al vehículo                                                      |
+| `partner_id`          | ObjectId | -        | Referencia al conductor                                                     |
+| `name`                | String   | ""       | Nombre del documento                                                        |
+| `option`              | Number   | 0        | Flag de mandotoriedad del documento                                         |
+| `document_picture`    | String   | ""       | URL o ruta de la imagen o archivo subido                                    |
+| `is_uploaded`         | Number   | 0        | Estado de la carga                                                          |
+| `unique_code`         | String   | ""       | Número del documento físico.                                                |
+| `expired_date`        | Date     | Date.now | Fecha de vencimiento del documento.                                         |
+| `is_unique_code`      | Boolean  | false    | Flag que indica si este documento requiere un código único para ser válido. |
+| `is_expired_date`     | Boolean  | false    | Flag que indica si este documento debe tener una fecha de expiración.       |
+| `is_document_expired` | Boolean  | false    | Estado de vigencia                                                          |
+| `created_at`          | Date     | Date.now | Fecha de creación                                                           |
+| `updated_at`          | Date     | Date.now | Fecha de la última modificación                                             |
+### Modelo - Partner_Weekly_Earning.js
+
+**Descripción:**
+Este modelo consolida todas las transacciones de los conductores 
+
+| Campo                                 | Tipo     | Default | Descripción                                                   |
+| :------------------------------------ | :------- | :------ | :------------------------------------------------------------ |
+| `provider_id`                         | ObjectId | -       | Referencia al proveedor                                       |
+| `statement_number`                    | String   | ""      | Número de factura                                             |
+| `total_distance`                      | Number   | 0       | Sumatoria de la distancia recorrida en todos los viajes       |
+| `total_time`                          | Number   | 0       | Sumatoria del tiempo total de viaje.                          |
+| `total_waiting_time`                  | Number   | 0       | Sumatoria del tiempo de espera cobrado durante la semana.     |
+| `total_service_fees`                  | Number   | 0       | Total de la tarifa                                            |
+| `total_service_surge_fees`            | Number   | 0       | Total recaudado                                               |
+| `total_service_tax_fees`              | Number   | 0       | Total de impuestos                                            |
+| `service_total`                       | Number   | 0       | Subtotal de los servicios                                     |
+| `promo_referral_amount`               | Number   | 0       | Monto ganado por promociones                                  |
+| `total`                               | Number   | 0       | Ingreso bruto total                                           |
+| `total_card_payment`                  | Number   | 0       | Total recaudado mediante pagos con tarjeta                    |
+| `total_cash_payment`                  | Number   | 0       | Total recaudado mediante pagos en efectivo.                   |
+| `total_wallet_payment`                | Number   | 0       | Total recaudado mediante saldos de billetera electrónica.     |
+| `total_partner_service_fees`          | Number   | 0       | Comisión neta                                                 |
+| `total_in_admin_currency`             | Number   | 0       |                                                               |
+| `total_partner_have_cash`             | Number   | 0       |                                                               |
+| `total_pay_to_partner`                | Number   | 0       |                                                               |
+| `admin_paid`                          | Number   | 0       |                                                               |
+| `remaining_amount_to_paid`            | Number   | 0       |                                                               |
+| `date_tag`                            | String   | ""      |                                                               |
+| `start_date_server_timezone`          | Date     | -       |                                                               |
+| `end_date_server_timezone`            | Date     | -       |                                                               |
+| `partner_provider_weekly_earning_ids` | Array    | []      | Lista de IDs de los registros individuales de cada conductor  |
+### Modelo - Partner.js
+
+**Descripción:**
+El modelo que define el perfil del socio comercial. A diferencia de un conductor individual, el Socio tiene la capacidad de registrar múltiples vehículos y conductores bajo su tutela
+
+| Campo                          | Tipo     | Default  | Descripción                                             |
+| :----------------------------- | :------- | :------- | :------------------------------------------------------ |
+| `unique_id`                    | Number   | -        | ID .                                                    |
+| `first_name`                   | String   | ""       | Nombre                                                  |
+| `last_name`                    | String   | ""       | Apellido                                                |
+| `partner_company_name`         | String   | ""       | Razón social                                            |
+| `rif`                          | String   | ""       | Registro de Información Fiscal                          |
+| `email`                        | String   | ""       | Correo electrónico                                      |
+| `password`                     | String   | ""       | Contraseña                                              |
+| `country_phone_code`           | String   | ""       | Código telefónico internacional del país.               |
+| `phone`                        | String   | ""       | Número de teléfono de contacto.                         |
+| `country_id`                   | ObjectId | -        | Referencia al país de operación.                        |
+| `city_id`                      | ObjectId | -        | Referencia a la ciudad base del socio.                  |
+| `address`                      | String   | ""       | Dirección física                                        |
+| `wallet`                       | Number   | 0        | Saldo acumulado en la billetera                         |
+| `wallet_currency_code`         | String   | ""       | Código de la moneda de la billetera                     |
+| `is_approved`                  | Number   | 0        | Estado de activación                                    |
+| `is_vehicle_document_uploaded` | Boolean  | false    | Indica si los documentos de la flota han sido cargados. |
+| `vehicle_detail`               | Array    | []       | Lista o detalles de los vehículos                       |
+| `picture`                      | String   | ""       |                                                         |
+| `rif_url`                      | String   | ""       | URL del documento RIF                                   |
+| `document_2`                   | String   | ""       | URL del documento legal (PDF).                          |
+| `government_id_proof`          | String   | ""       | URL de la identificación                                |
+| `stripe_doc` / `account_id`    | String   | ""       | IDs de referencia para integraciones .                  |
+| `bank_id` / `account_number`   | String   | ""       | Identificación del banco y número de                    |
+| `bank_code`                    | String   | ""       |                                                         |
+| `token`                        | String   | ""       | Token de sesión                                         |
+| `refferal_code`                | String   | ""       | Código de referido                                      |
+| `webpush_config`               | Object   | {}       |                                                         |
+| `mass_notifications`           | Array    | []       |                                                         |
+| `last_transferred_date`        | Date     | Date.now | Fecha de la última liquidación                          |
+| `created_at`                   | Date     | Date.now | Fecha de registro                                       |
+| `updated_at`                   | Date     | Date.now | Fecha de la última actualización                        |
