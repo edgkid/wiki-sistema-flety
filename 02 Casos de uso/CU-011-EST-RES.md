@@ -1,0 +1,65 @@
+## Caso de Uso: CU-011-EST-HIST - Reseñas
+
+Este caso de uso describe la funcionalidad para supervisar la calidad del servicio a través de las calificaciones cruzadas. El sistema permite auditar la experiencia tanto del cliente como del conductor para cada trayecto finalizado, facilitando la detección de incidencias o niveles de servicio excepcionales.
+
+---
+
+## 📋 Información General
+
+| Sección | Descripción |
+| :--- | :--- |
+| **ID** | CU-011-EST-RES |
+| **Caso de Uso** | Dashboard de usuario - Reseñas |
+| **Actor Principal** | Usuario |
+| **Actor Secundario** | Software |
+| **Objetivo** | Permite acceder, filtrar y analizar la retroalimentación de calidad proporcionada por los usuarios (clientes) y los conductores (aliados) sobre los viajes completados. |
+| **Prioridad** | Alta |
+
+---
+
+## 🛠️ Precondiciones del Sistema
+* El usuario inició sesión de forma exitosa (**CU-001-ADM** / **CU-001-CLI**).
+* El usuario cuenta con el rol y los permisos pertinentes.
+* Existe información de estadísticas en el sistema.
+
+---
+
+## 🔄 Flujo del Sistema
+
+
+
+| Actor Principal (Usuario) | Actor Secundario (Sistema) |
+| :--- | :--- |
+| | 1) El sistema ejecuta una consulta y muestra un listado con la información de las reseñas existentes. |
+| | 2) Se muestra: ID del viaje, Fecha, Correo electrónico del usuario, Calificación del usuario, Correo electrónico del conductor y Calificación del conductor. |
+| 3) Puede filtrar los resultados por Ítems de resultado, fecha y rango de fecha | 4) El sistema actualiza la lista según los filtros aplicados. |
+
+---
+
+## 🔀 Flujo Alternativo
+
+| Escenario | Resultado |
+| :--- | :--- |
+| **1) Interacción restringida** | El usuario interactúa únicamente con los módulos que puede visualizar según su rol. |
+
+---
+
+## ✅ Post-Condiciones
+
+| Escenario de Éxito | Escenario de Fallo |
+| :--- | :--- |
+| Es mostrada toda la información de estadísticas de reseñas. | El sistema muestra valores por defecto. |
+
+---
+
+## 🔗 Casos de Uso Relacionados
+* [[CU-004-EST-EST|⬅️ Volver a Dashboard General]]
+* [[CU-005-EST-DATF]] 
+* [[CU-006-EST-DATU]] 
+* [[CU-007-EST-VIAA]]
+* [[CU-008-EST-VIAC]] 
+* [[CU-009-EST-VIAF]] 
+* [[CU-010-EST-HIT]]
+* [[CU-012-EST-MOC]] 
+* [[CU-013-EST-BILL]] 
+* [[CU-014-EST-VIAE]]

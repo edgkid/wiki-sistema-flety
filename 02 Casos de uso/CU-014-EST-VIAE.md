@@ -1,0 +1,75 @@
+## Caso de Uso: CU-014-EST-VIAE - Viajes Entrantes
+
+Este caso de uso describe la funcionalidad de supervisión de los viajes entrantes al sistema. Permite al personal operativo monitorear las solicitudes que están ingresando a la plataforma en tiempo real, facilitando la asignación, clasificación y la gestión administrativa temprana de los servicios antes de su despacho definitivo.
+
+---
+
+## 📋 Información General
+
+| Sección | Descripción |
+| :--- | :--- |
+| **ID** | CU-014-EST-VIAE |
+| **Caso de Uso** | Dashboard de usuario - Viajes entrantes |
+| **Actor Principal** | Usuario |
+| **Actor Secundario** | Software |
+| **Objetivo** | Mostrar la lista en tiempo real de todos los viajes entrantes; monitoreo, clasificación y gestión de operaciones sobre viajes activos. |
+| **Prioridad** | Alta |
+
+---
+
+## 🛠️ Precondiciones del Sistema
+* El usuario inició sesión de forma exitosa (**CU-001-ADM** / **CU-001-CLI**).
+* El usuario cuenta con el rol y los permisos pertinentes.
+* Existe información de estadísticas y viajes registrados en estado entrante o curso.
+
+---
+
+## 🔄 Flujo del Sistema
+
+
+
+| Actor Principal (Usuario) | Actor Secundario (Sistema) |
+| :--- | :--- |
+| | 1) Ejecuta una consulta y muestra un listado de viajes entrantes. |
+| | 2) Se visualiza: Fecha Creación, Usuario, Unidad, Ruta, Detalles, Estatus y Total de Pagos. |
+| 3) Filtra resultados por ítems, fecha y rango | 4) El sistema actualiza la lista según los filtros. |
+| 5) Selecciona **Ver Mapa** | 6) Redirige a la vista de geolocalización (**CU-015-MAP**). |
+| 7) Selecciona **Cancelar viaje** | 8) Muestra alerta para confirmar la cancelación. |
+| 9) Selecciona **Ver detalle** | 10) Muestra un popup con el detalle técnico del viaje. |
+| 11) Selecciona **Editar información** | 12) Redirige a la vista de edición de datos (**CU-016-EDV**). |
+| 13) Gestiona Pagos (Cliente/Aliado/Preliquidar) | 14) Muestra popups de confirmación para cada acción financiera. |
+| 15) Selecciona **Reiniciar viaje** o **Nota** | 16) Muestra popups para reiniciar o agregar notas al viaje. |
+| 17) Selecciona **Exportar CSV** | 18) Genera los datos para descarga en formato CSV. |
+
+---
+
+## 🔀 Flujo Alternativo
+
+| Escenario | Resultado |
+| :--- | :--- |
+| **1) Sin Información Disponible** | El sistema muestra valores por defecto (tabla vacía). |
+| **2) Interacción con módulos** | El usuario interactúa solo con funciones permitidas según su rol. |
+
+---
+
+## ✅ Post-Condiciones
+
+| Escenario de Éxito | Escenario de Fallo |
+| :--- | :--- |
+| La vista de viajes activos se muestra completamente renderizada con todas las opciones de gestión. | Se muestra mensaje de error y valores por defecto. |
+
+---
+
+## 🔗 Casos de Uso Relacionados
+* * [[CU-004 - Dashboard]]
+* [[CU-009-EST-VIAF]]
+* [[CU-015-MAP]]
+* [[CU-016-EDV]]
+* [[CU-005-EST-DATF]] 
+* [[CU-006-EST-DATU]] 
+* [[CU-007-EST-VIAA]]
+* [[CU-008-EST-VIAC]] 
+* [[CU-010-EST-HIT]] 
+* [[CU-011-EST-RES]]
+* [[CU-012-EST-MOC]] 
+* [[CU-013-EST-BILL]]
