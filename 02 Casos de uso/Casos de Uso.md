@@ -6,7 +6,7 @@
         
 - **Gestión de Usuarios y Actores**
     
-    * [👤 usua (CU-001)](CU-001-Usuarios.md)
+    * * [👤 usua (CU-001)](CU-001-Usuarios.md)
         
     - [[Casos de Uso - Conductor|🚛 Conductor]]
         

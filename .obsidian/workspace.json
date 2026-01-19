@@ -14,15 +14,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Casos de uso/CU-001-Usuarios.md",
-                "mode": "preview",
+                "file": "02 Casos de uso/Casos de Uso.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CU-001-Usuarios"
+              "title": "Casos de Uso"
+            }
+          },
+          {
+            "id": "00e6ca17f1e98470",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Casos de uso/Casos de Uso.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Casos de Uso"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "95634f942dfd2503",
@@ -201,20 +216,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "f4f887e455cdbf0a",
+  "active": "00e6ca17f1e98470",
   "lastOpenFiles": [
+    "02 Casos de uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso.md",
     "04 Código/Models.md",
+    "04 Código/Country Service.md",
     "04 Código/Services.md",
     "03 API's/Diseño y Documentación de API’s.md",
-    "04 Código/Country Service.md",
     "04 Código/Filter Service.md",
     "04 Código/File Upload Service.md",
     "04 Código/Trip Service.md",
     "_sidebar.md",
     "03 API's/Login Swagger.md",
     "02 Casos de uso/CU-002-Recuperar Contraseña.md",
-    "02 Casos de uso/CU-001-Usuarios.md",
     "02 Casos de uso",
     "Welcome.md",
     "README.md",
