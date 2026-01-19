@@ -6,7 +6,7 @@
         
 - **Gestión de Usuarios y Actores**
     
-    * [👤 Usuarios (CU-001)](Casos%20de%20Uso/CU-001-Usuarios.md)
+    *  [👤 Usuarios (CU-001)](02%20Casos%20de%20uso/CU-001-Usuarios.md)
         
     - [[Casos de Uso - Conductor|🚛 Conductor]]
         
@@ -24,6 +24,6 @@
     
     - [[Casos de Uso - Notificaciones masivas|🔔 Notificaciones masivas]]
         
-    - [📊 Estadísticas](Casos%20de%20Uso/CU-004%20-%20Dashboard.md)
+    - [📊 Estadísticas](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
         
     - [[Casos de Uso - Reportes|📝 Reportes]]

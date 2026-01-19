@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "969101cb0b2418e5",
+        "id": "7eea830859863a23",
         "type": "tabs",
         "children": [
           {
-            "id": "44871b86b9287b56",
+            "id": "c966e2213b99447c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Casos de uso/CU-001-Usuarios.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CU-001-Usuarios"
+              "title": "New tab"
             }
           }
         ]
@@ -183,17 +179,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "44871b86b9287b56",
+  "active": "c966e2213b99447c",
   "lastOpenFiles": [
-    "_sidebar.md",
-    "02 Casos de uso/CU-004 - Dashboard.md",
-    "02 Casos de uso/Casos de Uso.md",
     "02 Casos de uso/CU-001-Usuarios.md",
-    "Casos de Uso",
+    "02 Casos de uso/Casos de Uso.md",
+    "02 Casos de uso/CU-004 - Dashboard.md",
+    "_sidebar.md",
     "02 Casos de uso/Casos de Uso/CU-001-Usuarios.md",
+    "02 Casos de uso/Casos de Uso",
+    "Casos de Uso",
     "README.md",
     "04 Código/Services.md",
-    "02 Casos de uso/Casos de Uso",
     "02 Casos de uso/CU-016-EDV.md",
     "02 Casos de uso/CU-015-MAP.md",
     "02 Casos de uso/CU-003-Registrar de Usuario.md",
