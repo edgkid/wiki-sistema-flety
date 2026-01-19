@@ -56,4 +56,4 @@ Este caso de uso describe el proceso mediante el cual un nuevo prospecto se inco
 ---
 
 ## 🔗 Casos de Uso Relacionados
-*[👤 Usuarios (CU-001)](CU-001-Usuarios.md)
+*[👤 Usuarios (CU-001)](02%20Casos%20de%20uso/CU-001-Usuarios.md)

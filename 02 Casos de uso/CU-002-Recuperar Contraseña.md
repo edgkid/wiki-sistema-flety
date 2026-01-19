@@ -56,7 +56,7 @@ Este caso de uso describe el procedimiento mediante el cual un usuario solicita 
 ---
 
 ## 🔗 Casos de Uso Relacionados
-* [👤 Usuarios - ADM (CU-001)](CU-001-Usuarios.md)
+* [Usuarios (CU-001)](02%20Casos%20de%20uso/CU-001-Usuarios.md)
 
 
 ## Caso de Uso: CU-002-CLI - Recuperar Contraseña
@@ -117,4 +117,4 @@ Este caso de uso describe el proceso mediante el cual un usuario que ha olvidado
 ---
 
 ## 🔗 Casos de Uso Relacionados
-*[👤 Usuarios - CLI (CU-001)](CU-001-Usuarios.md)
+*[Usuarios (CU-001)](02%20Casos%20de%20uso/CU-001-Usuarios.md)
