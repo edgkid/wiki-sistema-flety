@@ -6,6 +6,8 @@
 
 * **📂 Casos de Uso**
   * [Índice de Casos de Uso](02%20Casos%20de%20uso/Casos%20de%20Uso.md)
+    * [👤 Usuarios (CU-001)](./CU-001-Usuarios.md)
+    * [📊 Estadísticas](./CU-004%20-%20Dashboard.md)
 
 * **APIs**
   * [Diseño y Documentación](03%20API's/Diseño%20y%20Documentación%20de%20API’s.md)

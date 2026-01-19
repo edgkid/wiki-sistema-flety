@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c864c0dd6a6ac7f9",
+        "id": "f3857b4f066ef851",
         "type": "tabs",
         "children": [
           {
-            "id": "0e50f784456cc347",
+            "id": "050e00a5dd24d8c7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -74,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 294.5
   },
   "right": {
     "id": "4633fee13480926c",
@@ -179,9 +179,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "0e50f784456cc347",
+  "active": "050e00a5dd24d8c7",
   "lastOpenFiles": [
     "02 Casos de uso/CU-004 - Dashboard.md",
+    "_sidebar.md",
     "02 Casos de uso/Casos de Uso.md",
     "02 Casos de uso/CU-001-Usuarios.md",
     "02 Casos de uso/CU-016-EDV.md",
@@ -206,7 +207,6 @@
     "README.md",
     "CU-001-CLI-Inicio de Sesión.md",
     "04 Código/Models.md",
-    "04 Código/Country Service.md",
     "02 Casos de uso",
     "04 Código",
     "03 API's",
