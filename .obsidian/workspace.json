@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "68b73fab60fcc01e",
+        "id": "c864c0dd6a6ac7f9",
         "type": "tabs",
         "children": [
           {
-            "id": "98aac005ee4c5ce8",
+            "id": "0e50f784456cc347",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Casos de uso/CU-016-EDV.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CU-016-EDV"
+              "title": "New tab"
             }
           }
         ]
@@ -183,17 +179,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "98aac005ee4c5ce8",
+  "active": "0e50f784456cc347",
   "lastOpenFiles": [
-    "02 Casos de uso/CU-015-MAP.md",
     "02 Casos de uso/CU-004 - Dashboard.md",
+    "02 Casos de uso/Casos de Uso.md",
     "02 Casos de uso/CU-001-Usuarios.md",
+    "02 Casos de uso/CU-016-EDV.md",
+    "02 Casos de uso/CU-015-MAP.md",
     "02 Casos de uso/CU-003-Registrar de Usuario.md",
     "02 Casos de uso/CU-003-Registro de Usuario.md",
     "CU-003-Registrar Usuario.md",
     "02 Casos de uso/CU-002-Recuperar Contraseña.md",
-    "02 Casos de uso/CU-016-EDV.md",
-    "02 Casos de uso/Casos de Uso.md",
     "02 Casos de uso/CU-014-EST-VIAE.md",
     "CU-004-EST-EST.md",
     "02 Casos de uso/CU-013-EST-BILL.md",
