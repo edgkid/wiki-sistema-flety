@@ -60,8 +60,8 @@ Este caso de uso describe la visualización de las métricas demográficas y de 
 * [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 * [CU-005-EST-DATF](02%20Casos%20de%20uso/CU-005-EST-DATF.md) 
 * [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
-* [[CU-008-EST-VIAC]]
-* [[CU-009-EST-VIAF]] 
+* [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md) 
+* [CU-009-EST-VIAF](02%20Casos%20de%20uso/CU-009-EST-VIAF.md)
 * [[CU-010-EST-HIT]] 
 * [[CU-011-EST-RES]]
 * [[CU-012-EST-MOC]] 

@@ -57,8 +57,8 @@ Este caso de uso describe la gestión y supervisión de los costos asociados al 
 * [CU-005-EST-DATF](02%20Casos%20de%20uso/CU-005-EST-DATF.md) 
 * [CU-006-EST-DATU](02%20Casos%20de%20uso/CU-006-EST-DATU.md) 
 * [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
-* [[CU-008-EST-VIACC]] 
-* [[CU-009-EST-VIAF]] 
+* [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md)  
+* [CU-009-EST-VIAF](02%20Casos%20de%20uso/CU-009-EST-VIAF.md) 
 * [[CU-010-EST-HIT]]
 * [[CU-011-EST-RES]] 
 * [[CU-012-EST-MOC]] 

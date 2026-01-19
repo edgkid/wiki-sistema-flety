@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Casos de uso/CU-016-EDV.md",
+                "file": "02 Casos de uso/CU-004 - Dashboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CU-016-EDV"
+              "title": "CU-004 - Dashboard"
             }
           }
         ]
@@ -185,19 +185,19 @@
   },
   "active": "348bb0874a3d4a30",
   "lastOpenFiles": [
-    "02 Casos de uso/CU-015-MAP.md",
-    "02 Casos de uso/CU-014-EST-VIAE.md",
-    "02 Casos de uso/CU-013-EST-BILL.md",
-    "02 Casos de uso/CU-012-EST-MOC.md",
-    "02 Casos de uso/CU-011-EST-RES.md",
-    "02 Casos de uso/CU-010-EST-HIT.md",
-    "02 Casos de uso/CU-009-EST-VIAF.md",
-    "02 Casos de uso/CU-008-EST-VIAC.md",
-    "02 Casos de uso/CU-007-EST-VIAA.md",
-    "02 Casos de uso/CU-006-EST-DATU.md",
     "02 Casos de uso/CU-005-EST-DATF.md",
-    "02 Casos de uso/CU-004 - Dashboard.md",
+    "02 Casos de uso/CU-006-EST-DATU.md",
+    "02 Casos de uso/CU-007-EST-VIAA.md",
+    "02 Casos de uso/CU-008-EST-VIAC.md",
+    "02 Casos de uso/CU-009-EST-VIAF.md",
+    "02 Casos de uso/CU-010-EST-HIT.md",
+    "02 Casos de uso/CU-011-EST-RES.md",
+    "02 Casos de uso/CU-012-EST-MOC.md",
+    "02 Casos de uso/CU-013-EST-BILL.md",
+    "02 Casos de uso/CU-014-EST-VIAE.md",
+    "02 Casos de uso/CU-015-MAP.md",
     "02 Casos de uso/CU-016-EDV.md",
+    "02 Casos de uso/CU-004 - Dashboard.md",
     "02 Casos de uso/CU-003-Registrar de Usuario.md",
     "02 Casos de uso/CU-002-Recuperar Contraseña.md",
     "02 Casos de uso/CU-001-Usuarios.md",

@@ -66,6 +66,6 @@ Este caso de uso describe la funcionalidad de consulta y auditoría de los servi
 * [[CU-007-EST-VIAA]]
 * [[CU-015-MAP]]
 * [[CU-016-EDV]]
-* [[CU-009-EST-VIAF]] 
+* [CU-009-EST-VIAF](02%20Casos%20de%20uso/CU-009-EST-VIAF.md) 
 * [[CU-010-EST-HIT]] 
 * [[CU-013-EST-BILL]]

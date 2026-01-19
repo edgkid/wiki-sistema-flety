@@ -65,6 +65,6 @@ Este caso de uso describe la funcionalidad de monitoreo y gestión operativa de 
 * [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 * [[CU-015-MAP]]
 * [[CU-016-EDV]]
-* [[CU-008-EST-VIAC]] 
+* [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md)  
 * [[CU-009-EST-VIAF]] 
 * [[CU-010-EST-HIT]]
