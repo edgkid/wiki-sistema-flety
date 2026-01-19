@@ -43,8 +43,8 @@ Este caso de uso describe el proceso mediante el cual un usuario registrado acce
 | Se actualiza la sesión del usuario | |
 
 ### 🔗 Casos de Uso Relacionados 
-* [[CU-002-Recuperar Contraseña]] 
-* [[CU-004 - Dashboard]]
+* [ CU-002-Recuperar Contraseña](02%20Casos%20de%20uso/CU-002-Recuperar%20Contraseña.md) 
+* [ CU-004 - Dashboard](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 
 # CU-001-Usuarios
 
@@ -108,7 +108,7 @@ Este caso de uso describe el proceso mediante el cual un usuario registrado acce
 ---
 
 ## 🔗 Casos de Uso Relacionados
-* [[CU-002-Recuperar Contraseña]]
-* [[CU-003-Registrar de Usuario]]
-* [[CU-004 - Dashboard]]
+* [ CU-002-Recuperar Contraseña](02%20Casos%20de%20uso/CU-002-Recuperar%20Contraseña.md)
+* [ CU-003-Registrar de Usuario](02%20Casos%20de%20uso/CU-003-Registrar%20de%20Usuario.md)
+*  [ CU-004 - Dashboard](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 

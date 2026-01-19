@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1ba66c80ae66af19",
+        "id": "c765031b049fa057",
         "type": "tabs",
         "children": [
           {
-            "id": "9d3208cc6ed6eb26",
+            "id": "348bb0874a3d4a30",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -179,13 +179,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "9d3208cc6ed6eb26",
+  "active": "348bb0874a3d4a30",
   "lastOpenFiles": [
+    "02 Casos de uso/Casos de Uso.md",
+    "02 Casos de uso/CU-002-Recuperar Contraseña.md",
+    "02 Casos de uso/CU-001-Usuarios.md",
+    "02 Casos de uso/CU-004 - Dashboard.md",
     "02 Casos de uso/CU-010-EST-HIT.md",
     "_sidebar.md",
-    "02 Casos de uso/CU-004 - Dashboard.md",
-    "02 Casos de uso/Casos de Uso.md",
-    "02 Casos de uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso",
     "Casos de Uso",
@@ -196,7 +197,6 @@
     "02 Casos de uso/CU-003-Registrar de Usuario.md",
     "02 Casos de uso/CU-003-Registro de Usuario.md",
     "CU-003-Registrar Usuario.md",
-    "02 Casos de uso/CU-002-Recuperar Contraseña.md",
     "02 Casos de uso/CU-014-EST-VIAE.md",
     "CU-004-EST-EST.md",
     "02 Casos de uso/CU-013-EST-BILL.md",

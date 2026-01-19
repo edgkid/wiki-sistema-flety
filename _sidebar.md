@@ -7,8 +7,9 @@
 * **📂 Casos de Uso**
   * [Índice de Casos de Uso](02%20Casos%20de%20uso/Casos%20de%20Uso.md)
     * [👤 Usuarios (CU-001)](02%20Casos%20de%20uso/CU-001-Usuarios.md)
-    * [📊 Estadísticas](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
-      * [📊 CU-004 - Dashboard](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
+      * [🔑 CU-002-Recuperar Contraseña](02%20Casos%20de%20uso/CU-002-Recuperar%20Contraseña.md)
+      * [📝 CU-003-Registrar de Usuario](02%20Casos%20de%20uso/CU-003-Registrar%20de%20Usuario.md)
+    * [📊 Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
       * [📈 CU-005-EST-DATF](02%20Casos%20de%20uso/CU-005-EST-DATF.md)
       * [📈 CU-006-EST-DATU](02%20Casos%20de%20uso/CU-006-EST-DATU.md)
       * [📈 CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
