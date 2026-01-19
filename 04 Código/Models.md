@@ -901,3 +901,458 @@ El modelo para manejar los datos de perfil del conductor.
 | `zone_queue_id`                | ObjectId        | -        | ID de la zona .                                                   |
 | `created_at`                   | Date            | Date.now | Fecha de registro                                                 |
 | `updated_at`                   | Date            | Date.now | Fecha de la última actualización                                  |
+### Modelo - Red_Zone_Area.js
+
+**Descripción:**
+El modelo permite manejar información de áreas de riesgo
+
+| Campo            | Tipo     | Default  | Descripción                                          |
+| :--------------- | :------- | :------- | :--------------------------------------------------- |
+| `cityid`         | ObjectId | -        | Referencia de City                                   |
+| `title`          | String   | ""       | Nombre identificador de la zona.                     |
+| `styleUrl`       | String   | ""       |                                                      |
+| `styleHash`      | String   | ""       |                                                      |
+| `description`    | String   | ""       | Detalle o motivo de la restricción de la zona.       |
+| `stroke`         | String   | ""       | Color del borde del polígono en formato hexadecimal. |
+| `stroke_opacity` | Number   | 0        | Nivel de transparencia del borde (0 a 1).            |
+| `stroke_width`   | Number   | 0        | Grosor del borde del polígono en el mapa.            |
+| `fill`           | String   | ""       | Color de relleno del área en formato hexadecimal.    |
+| `fill_opacity`   | Number   | 0        | Nivel de transparencia del relleno (0 a 1).          |
+| `kmlzone`        | Array    | []       | Arreglo de coordenadas                               |
+| `created_at`     | Date     | Date.now | Fecha de creación del registro.                      |
+| `updated_at`     | Date     | Date.now | Fecha de la última modificación                      |
+### Modelo - Request_User_Corporate.js
+
+**Descripción:**
+Este modelo almacena los datos básicos, credenciales y documentos legales cargados durante el proceso de registro inicial. Una vez que el administrador valida la información, el estado cambia de `pending` a aprobado (permitiendo la migración o activación del perfil corporativo oficial).
+
+| Campo         | Tipo   | Default   | Descripción                                   |
+| :------------ | :----- | :-------- | :-------------------------------------------- |
+| `unique_id`   | Number | -         | Id                                            |
+| `country`     | String | -         | País de operaciones                           |
+| `city`        | String | -         | Ciudad principal de operaciones de la empresa |
+| `name`        | String | -         | razón social de la corporación                |
+| `email`       | String | -         | Correo electrónico                            |
+| `address`     | String | -         | Dirección física                              |
+| `phone`       | String | -         | Número de teléfono                            |
+| `countryCode` | String | -         | Código telefónico                             |
+| `password`    | String | -         | Contraseña e                                  |
+| `logo`        | Buffer | -         |                                               |
+| `document`    | Buffer | -         |                                               |
+| `status`      | String | 'pending' | Estatus de la solicitud.                      |
+| `created_at`  | Date   | Date.now  | Fecha de creación                             |
+| `updated_at`  | Date   | Date.now  | Fecha de la última modificación               |
+### Modelo - Reviews.js
+
+**Descripción:**
+El modelo  consolida las calificaciones y comentarios generados al finalizar un servicio. 
+
+| Campo                       | Tipo     | Default  | Descripción                                                              |
+| :-------------------------- | :------- | :------- | :----------------------------------------------------------------------- |
+| `userRating`                | Number   | 0        | Calificación numérica                                                    |
+| `userReview`                | String   | ""       | Comentario o reseña                                                      |
+| `userName`                  | String   | ""       | Nombre del usuario que realiza la reseña                                 |
+| `providerRating`            | Number   | 0        | Calificación numérica otorgada por el proveedor al usuario.              |
+| `providerReview`            | String   | ""       | Comentario escrito por el proveedor sobre el comportamiento del usuario. |
+| `providerRatingDestination` | Number   | 0        | Calificación del proveedor específicamente sobre la zona                 |
+| `providerReviewDestination` | String   | ""       | Comentarios del proveedor sobre dificultades o detalles del destino.     |
+| `trip_id`                   | ObjectId | -        | Referencia al ID único del viaje (Trip)                                  |
+| `trip_unique_id`            | Number   | -        | ID numérico incremental                                                  |
+| `user_id`                   | ObjectId | -        | Referencia al usuario  involucrado en la reseña.                         |
+| `provider_id`               | ObjectId | -        | Referencia al proveedor involucrado en la reseña.                        |
+| `created_at`                | Date     | Date.now | Fecha de creación del registro                                           |
+| `updated_at`                | Date     | Date.now | Fecha de la última actualización                                         |
+### Modelo - Service_Specifications.js
+
+**Descripción:**
+Este modelo gestiona el catálogo de especificaciones técnicas que pueden ofrecer los proveedores. Estas especificaciones funcionan como filtros para que el usuario personalice su solicitud y el sistema pueda emparejarlo con un conductor cuyo vehículo cumpla con dichos requisitos. 
+
+| Campo                | Tipo   | Default  | Descripción                                                |
+| :------------------- | :----- | :------- | :--------------------------------------------------------- |
+| `unique_id`          | Number | -        | Identificador numérico                                     |
+| `specification_name` | String | ""       | Nombre de la característica                                |
+| `specification_note` | String | ""       | descripción detallada de lo que implica la especificación. |
+| `state`              | Number | 0        | Estado de la especificación.                               |
+| `created_at`         | Date   | Date.now | Fecha de creación                                          |
+| `updated_at`         | Date   | Date.now | Fecha de la última modificación                            |
+### Modelo - Sms_Detail.js
+
+**Descripción:**
+El modelo  actúa como un repositorio de mensajes predefinidos.
+
+| Campo            | Tipo   | Default | Descripción                      |
+| :--------------- | :----- | :------ | :------------------------------- |
+| `smsUniqueId`    | Number | -       | Identificador numérico           |
+| `smsUniqueTitle` | String | ""      | Título descriptivo               |
+| `smsContent`     | String | ""      | El cuerpo del mensaje de texto.  |
+### Modelo - State_By_Country.js
+
+**Descripción:**
+El modelo maneja el esquema de divisiones administrativas de primer nivel (Estados, Provincias o Departamentos) dentro de un país determinado. Es esencial para los procesos de registro de usuarios y conductores, permitiendo  manera jerárquica, como por ejemplo; País > Estado > Ciudad.
+
+| Campo          | Tipo     | Default | Descripción                                |
+| :------------- | :------- | :------ | :----------------------------------------- |
+| `unique_id`    | Number   | -       | Identificador numérico                     |
+| `type`         | String   | ""      |                                            |
+| `country_name` | String   | ""      | Nombre del país al que pertenece el estado |
+| `country_id`   | ObjectId | -       | Referencia al modelo **Country**           |
+| `state_name`   | String   | ""      | Nombre                                     |
+| `state_number` | Number   | -       | Código numérico o ID                       |
+| `features`     | Array    | []      |                                            |
+### Modelo - Transfer_History.js
+
+**Descripción:**
+El esquema registra el historial de transferencias  realizadas por la administración. Se utiliza principalmente para realizar el seguimiento de los pagos de ganancias acumuladas a conductores (`Providers`) y socios de flota (`Partners`). 
+
+| Campo             | Tipo     | Default  | Descripción                                |
+| :---------------- | :------- | :------- | :----------------------------------------- |
+| `unique_id`       | Number   | -        | Identificador numérico                     |
+| `user_type`       | Number   | -        | tipo de usuairo receptor                   |
+| `user_id`         | ObjectId | -        | ID de referencia de usuario                |
+| `country_id`      | ObjectId | -        | Referencia al país                         |
+| `amount`          | Number   | 0        | Monto total transferido                    |
+| `currency_code`   | String   | ""       | Código ISO de la moneda                    |
+| `transfer_status` | Number   | 0        | Estatus de transacción                     |
+| `transfered_by`   | Number   | 0        |                                            |
+| `error`           | Object   | -        | Objeto que captura el log en caso de error |
+| `transfer_id`     | String   | ""       | ID de referencia                           |
+| `created_at`      | Date     | Date.now | Fecha de creación                          |
+| `updated_at`      | Date     | Date.now | Fecha de la última actualización           |
+### Modelo - Trip.js
+
+**Descripción:**
+El modelo permite gestionar el ciclo de vida completo de un servicio, desde la solicitud inicial y la asignación del proveedor, hasta el seguimiento en tiempo real, el desglose detallado de la facturación y manejo de tarifas.
+
+Este modelo declara dos esquemas.
+Esquema #1 declarado
+
+| Campo                 | Tipo     | Default  | Descripción                                     |
+| :-------------------- | :------- | :------- | :---------------------------------------------- |
+| `unique_id`           | Number   | -        | ID numérico                                     |
+| `invoice_number`      | String   | ""       | Número de factura único del viaje.              |
+| `user_id`             | ObjectId | -        | Referencia al usuario que solicita el servicio. |
+| `provider_id`         | ObjectId | -        | Referencia al conductor                         |
+| `service_type_name`   | String   | ""       | Nombre de la categoría de servicio              |
+| `split_payment_users` | Array    | `[]`     | Lista de participantes para pago compartido     |
+| `source_address`      | String   | ""       | Dirección pickup                                |
+| `destination_address` | String   | ""       | Dirección de destino                            |
+| `sourceLocation`      | [Number] | -        | Coordenadas  de origen.                         |
+| `destinationLocation` | [Number] | -        | Coordenadas de destino.                         |
+| `payment_mode`        | Number   | -        | Método de pago                                  |
+| `total`               | Number   | 0        | Monto total                                     |
+| `promo_payment`       | Number   | 0        | Descuento aplicado por promociones.             |
+| `tax_fee`             | Number   | 0        | Impuestos aplicados al viaje.                   |
+| `total_distance`      | Number   | 0        | Distancia total recorrida.                      |
+| `total_time`          | Number   | 0        | Tiempo total del viaje en minutos.              |
+| `is_schedule_trip`    | Boolean  | false    | Indica si el viaje fue programado.              |
+| `is_trip_completed`   | Number   | 0        | Flag de viaje finalizado con éxito.             |
+| `is_trip_cancelled`   | Number   | 0        | Flag de viaje cancelado.                        |
+| `created_at`          | Date     | Date.now | Fecha de creación del registro.                 |
+Esquema #2 declarado
+
+| Campo               | Tipo     | Default | Descripción                                  |
+| :------------------ | :------- | :------ | :------------------------------------------- |
+| `user_id`           | ObjectId | -       | Referencia al usuario                        |
+| `first_name`        | String   | ""      | Nombre del usuario.                          |
+| `last_name`         | String   | ""      | Apellido del usuario.                        |
+| `email`             | String   | ""      | Correo electrónico                           |
+| `phone`             | String   | ""      | Número de teléfono.                          |
+| `payment_intent_id` | String   | ""      | ID de registro de pago en Stripe             |
+| `status`            | Number   | 0       | Estado invitación                            |
+| `payment_status`    | Number   | 0       | Estado pago                                  |
+| `total`             | Number   | 0       | Cuota total a pagar                          |
+| `remaining_payment` | Number   | 0       | Monto restante por liquidar.                 |
+| `card_payment`      | Number   | 0       | Monto pagado con tarjeta por este usuario.   |
+| `wallet_payment`    | Number   | 0       | Monto pagado con billetera por este usuario. |
+
+### Modelo - Trip_History.js
+
+**Descripción:**
+ Cuando un viaje en la colección activa `Trip` termina su ciclo de vida (completado o cancelado), se registra aquí, permitir auditorías, reportes.
+ 
+Este modelo declara dos esquemas.
+Esquema #1 declarado
+
+| Campo                   | Tipo   | Descripción                                      |
+| :---------------------- | :----- | :----------------------------------------------- |
+| `unique_id`             | Number | Identificador numérico                           |
+| `invoice_number`        | String | Número de factura del viaje                      |
+| `service_type_name`     | String | Nombre de la categoría de servicio.              |
+| `user_first_name`       | String | Nombre del cliente que solicitó el viaje.        |
+| `provider_first_name`   | String | Nombre del conductor que realizó el viaje.       |
+| `source_address`        | String | Dirección de origen                              |
+| `destination_address`   | String | Dirección de destino                             |
+| `total`                 | Number | Monto total final facturado al cierre del viaje. |
+| `payment_mode`          | Number | Método de pago utilizado                         |
+| `payment_status`        | Number | Estado final del pago                            |
+| `is_trip_completed`     | Number | Flag de finalización                             |
+| `is_trip_cancelled`     | Number | Flag de cancelación                              |
+| `total_distance`        | Number | Distancia total recorrida en el viaje.           |
+| `total_time`            | Number | Tiempo total transcurrido                        |
+| `promo_payment`         | Number | Descuento total aplicado por promociones.        |
+| `wallet_payment`        | Number | Monto pagadol.                                   |
+| `card_payment`          | Number | Monto procesado                                  |
+| `cash_payment`          | Number | Monto pagado                                     |
+| `provider_service_fees` | Number | Ganancia neta para el proveedor.                 |
+| `pay_to_provider`       | Number | Monto a transferir al conductor.                 |
+| `created_at`            | Date   | Fecha de creación del registro                   |
+Esquema #2 declarado
+
+| Campo               | Tipo     | Descripción                 |
+| :------------------ | :------- | :-------------------------- |
+| `user_id`           | ObjectId | Referencia de usuario       |
+| `first_name`        | String   | Nombre del usuario          |
+| `email`             | String   | Correo electrónico          |
+| `phone`             | String   | Número de teléfono          |
+| `payment_intent_id` | String   | ID de transacción en Stripe |
+| `status`            | Number   | Estado invitación           |
+| `payment_status`    | Number   | Estado pago                 |
+| `total`             | Number   |                             |
+| `remaining_payment` | Number   | Monto pendiente por cobrar. |
+| `cash_payment`      | Number   | Monto pagado en efectivo.   |
+| `card_payment`      | Number   | Monto pagado con tarjeta.   |
+| `wallet_payment`    | Number   | Monto pagado con billetera. |
+### Modelo - Trip_Location.js
+
+**Descripción:**
+ El modelo  almacena los datos de coordenadas punto a punto de un viaje. 
+
+| Campo                                       | Tipo     | Default  | Descripción                                                      |
+| :------------------------------------------ | :------- | :------- | :--------------------------------------------------------------- |
+| `tripID`                                    | ObjectId | -        | Referencia al ID único del viaje                                 |
+| `trip_unique_id`                            | Number   | -        | ID numérico incremental ia.                                      |
+| `providerStartTime`                         | Date     | Date.now | Hora en la que el conductor inició el trayecto hacia el usuario. |
+| `providerStartLocation`                     | [Number] | -        | Ubicación GPS inicial                                            |
+| `startTripTime`                             | Date     | Date.now | Hora exacta en la que se inicio el servici                       |
+| `startTripLocation`                         | [Number] | -        | Ubicación GPS del punto del recorrido                            |
+| `endTripTime`                               | Date     | Date.now | Hora en la que se marcó el fin del viaje.                        |
+| `endTripLocation`                           | [Number] | -        | Ubicación GPS del punto de llegada real                          |
+| `providerStartToStartTripLocations`         | Array    | []       | Historial de coordenadas del servicio realizado                  |
+| `startTripToEndTripLocations`               | Array    | []       |                                                                  |
+| `actual_startTripToEndTripLocations`        | Array    | []       |                                                                  |
+| `googlePathStartLocationToPickUpLocation`   | String   | ""       |                                                                  |
+| `googlePickUpLocationToDestinationLocation` | String   | ""       |                                                                  |
+| `google_total_distance`                     | Number   | 0        | Distancia total calculada                                        |
+| `speed`                                     | Number   | 0        | Velocidad promedio                                               |
+| `created_at`                                | Date     | Date.now | Fecha de creación                                                |
+| `updated_at`                                | Date     | Date.now | Fecha de la última actualización                                 |
+### Modelo - Trip_Servcie.js
+
+**Descripción:**
+ Este modelo permite definir tarifas base para servicios 
+
+| Campo                             | Tipo     | Descripción                                           |
+| :-------------------------------- | :------- | :---------------------------------------------------- |
+| `trip_id`                         | ObjectId | Referencia del viaje                                  |
+| `service_type_id`                 | ObjectId | Referencia al tipo de servicio                        |
+| `city_id`                         | ObjectId | Referencia de ciudad                                  |
+| `service_type_name`               | String   | Nombre del tipo de servicio.                          |
+| `typename`                        | String   |                                                       |
+| `min_fare`                        | Number   | Tarifa mínima                                         |
+| `base_price`                      | Number   | Precio inicial                                        |
+| `price_per_unit_distance`         | Number   | Costo por unidad de distancia                         |
+| `price_for_total_time`            | Number   | Costo por minuto transcurrido de trayecto.            |
+| `price_for_waiting_time`          | Number   | Costo por minuto de espera una vez iniciado el cobro. |
+| `waiting_time_start_after_minute` | Number   | Minutos de gracia antes de cobrar tiempo de espera.   |
+| `surge_multiplier`                | Number   | Multiplicador por alta demanda (                      |
+| `is_surge_hours`                  | Number   | Flag para activar o desactivar horas pico.            |
+| `user_tax`                        | Number   | Porcentaje de impuesto aplicado                       |
+| `provider_tax`                    | Number   | Porcentaje de impuesto retenido                       |
+| `provider_profit`                 | Number   | Ganancia configurada para el conductor.               |
+| `cancellation_fee`                | Number   | Penalidad por cancelación tardía.                     |
+| `is_car_rental_business`          | Number   |                                                       |
+| `cost_per_helper`                 | Number   |                                                       |
+| `cost_travel_insurance`           | Number   |                                                       |
+| `ferry_ticket_price`              | Number   |                                                       |
+| `model_type`                      | Number   |                                                       |
+| `user_type`                       | Number   | Creador de la tarifa                                  |
+
+| Campo (Tramo)    | Rango de Distancia | Descripción                                               |
+| :--------------- | :----------------- | :-------------------------------------------------------- |
+| `price_per_km_a` | 0 - 15 KM          | Tarifa para trayectos urbanos cortos.                     |
+| `price_per_km_b` | 16 - 30 KM         | Tarifa para trayectos suburbanos.                         |
+| `price_per_km_c` | 31 - 50 KM         | Tarifa para trayectos metropolitanos.                     |
+| `price_per_km_d` | 51 - 80 KM         | Tarifa para viajes regionales cortos.                     |
+| `price_per_km_e` | 81 - 110 KM        | Tarifa para viajes regionales medios.                     |
+| `price_per_km_f` | 111 - 150 KM       | Tarifa para viajes interciudades.                         |
+| `price_per_km_g` | 151 - 200 KM       | Tarifa para transporte troncal.                           |
+| `price_per_km_h` | 201 - 300 KM       | Tarifa para viajes intermunicipales.                      |
+| `price_per_km_p` | 301 - 450 KM       | Tarifa para viajes intermunicipales largos.               |
+| `price_per_km_q` | 451 - 600 KM       | Tarifa para logística de media distancia.                 |
+| `price_per_km_r` | 601 - 800 KM       | Tarifa para logística nacional.                           |
+| `price_per_km_s` | 801 - 1000 KM      | Tarifa para transporte de carga pesada nacional.          |
+| `price_per_km_t` | 1001 - 1150 KM     | Tarifa para trayectos de gran recorrido.                  |
+| `price_per_km_u` | 1151 - 1300 KM     | Tarifa para rutas críticas de larga distancia.            |
+| `price_per_km_w` | > 1300 KM          | Tarifa para transporte internacional o de larga distancia |
+|                  |                    |                                                           |
+
+### Modelo - Type.js
+
+**Descripción:**
+ Este modelo es la base de jerarquía de servicios. Define las características maestras de una categoría,  límites de carga, es el molde sobre el cual se aplican luego los precios por ciudad.
+
+| Campo                     | Tipo    | Descripción                                |
+| :------------------------ | :------ | :----------------------------------------- |
+| `typename`                | String  | Nombre principal de la categoría           |
+| `typename2`               | String  | Nombre secundario                          |
+| `description`             | String  | Descripción de lo que incluye el servicio. |
+| `type_image_url`          | String  |                                            |
+| `map_pin_image_url`       | String  |                                            |
+| `panel_map_pin_image_url` | String  |                                            |
+| `service_type`            | Number  |                                            |
+| `priority`                | Number  |                                            |
+| `is_business`             | Number  |                                            |
+| `is_default_selected`     | Boolean |                                            |
+| `ride_share_limit`        | Number  | Capacidad máxima                           |
+| `type_model_list`         | Array   | IDs de modelos de vehículos permitidos     |
+| `type_service_list`       | Array   | IDs de servicios adicionales vinculados.   |
+| `type_capacity_list`      | Array   | Capacidades permitidas                     |
+| `label_capacity_id`       | Array   | Capacidad de carga.                        |
+| `label_measurement_id`    | Array   |                                            |
+| `label_pallet_id`         | Array   |                                            |
+| `is_use_model`            | Number  |                                            |
+| `is_use_capacity`         | Number  |                                            |
+| `is_use_services`         | Number  |                                            |
+| `model_type`              | Number  |                                            |
+| `created_at`              | Date    | Fecha de creación                          |
+| `updated_at`              | Date    | Fecha de la última actualización           |
+
+### Modelo - Type_Capacity.js
+
+**Descripción:**
+ El modelo permite la gestión   de carga pesada y la naturaleza de la carga.
+ 
+| Campo           | Tipo   | Descripción                       |
+| :-------------- | :----- | :-------------------------------- |
+| `unique_id`     | Number | IId                               |
+| `capacity_name` | String | Nombre                            |
+| `value`         | Number | Capacidad                         |
+| `state`         | Number | Estatus                           |
+| `unit`          | Number | Tipo de medida.                   |
+| `created_at`    | Date   | Fecha de creación del registro.   |
+| `updated_at`    | Date   | Fecha de la última actualización. |
+### Modelo - Type_Model.js
+
+**Descripción:**
+ El modelo  gestiona el catálogo de tipos y modelos para un servicio en específicos.
+
+| **Campo**           | **Tipo** | **Descripción**                 |
+| ------------------- | -------- | ------------------------------- |
+| `unique_id`         | `Number` | Identificador numérico          |
+| `model_name`        | `String` | Nombre descriptivo del modelo   |
+| `model_image_url`   | `String` |                                 |
+| `state`             | `Number` | Estado del registro             |
+| `type_service_list` | `Array`  | Lista de IDs de servicios       |
+| `sequence`          | `String` |                                 |
+| `model_type`        | `Number` |                                 |
+| `created_at`        | `Date`   | Fecha de creación.              |
+| `updated_at`        | `Date`   | Fecha de la última modificación |
+
+### Modelo - Type_Service.js
+
+**Descripción:**
+El modelo `Type_Services` define las reglas operativas de un servicio específico. 
+
+| Campo                 | Tipo   | Descripción                       |
+| :-------------------- | :----- | :-------------------------------- |
+| `unique_id`           | Number | Identificador numérico            |
+| `service_name`        | String | Nombre del servicio               |
+| `specification_array` | Array  |                                   |
+| `courier_type`        | Number | Lógica de Flujo                   |
+| `state`               | Number | Estado del servicio               |
+| `created_at`          | Date   | Fecha de creación del registro.   |
+| `updated_at`          | Date   | Fecha de la última actualización. |
+### Modelo - User.js
+
+**Descripción:**
+El modelo  representa al cliente en la plataforma.
+
+| Campo          | Tipo   | Descripción              |
+| :------------- | :----- | :----------------------- |
+| `unique_id`    | Number | ID numérico              |
+| `first_name`   | String | Nombre(s) del usuario.   |
+| `last_name`    | String | Apellido(s) del usuario. |
+| `email`        | String | Correo electrónico       |
+| `phone`        | String | Número telefónico        |
+| `password`     | String | Contraseña               |
+| `token`        | String | Token de sesió           |
+| `device_token` | String | Token de Firebase        |
+| `login_by`     | String | Método de acceso.        |
+### Modelo - User_Document.js
+
+**Descripción:**
+El modelo permite vincular un documento requerido (definido globalmente) con los datos del  usuario.
+
+| Campo                 | Tipo     | Descripción                                                       |
+| :-------------------- | :------- | :---------------------------------------------------------------- |
+| `document_id`         | ObjectId | Referencia al tipo de documento                                   |
+| `name`                | String   | Nombre descriptivo del documento                                  |
+| `user_id`             | ObjectId | Referencia al usuario                                             |
+| `option`              | Number   | Define si es obligatorio                                          |
+| `document_picture`    | String   |                                                                   |
+| `is_uploaded`         | Number   | Estado de carga                                                   |
+| `unique_code`         | String   |                                                                   |
+| `expired_date`        | Date     | Fecha de vencimiento del documento.                               |
+| `is_unique_code`      | Boolean  | Indica si el documento requiere obligatoriamente un código único. |
+| `is_expired_date`     | Boolean  | Indica si el documento requiere una fecha de vencimiento.         |
+| `is_document_expired` | Boolean  |                                                                   |
+| `created_at`          | Date     | Fecha de creación del registro.                                   |
+| `updated_at`          | Date     | Fecha de la última actualización.                                 |
+### Modelo - User_Promo.js
+
+**Descripción:**
+El modelo vincula un usuario con un código promocional específico tras la finalización de un viaje. 
+
+| Campo                                | Tipo     | Descripción                       |
+| :----------------------------------- | :------- | :-------------------------------- |
+| `promo_id`                           | ObjectId | Referencia al documento           |
+| `promocode`                          | String   | El código de promoción            |
+| `user_id`                            | ObjectId | Referencia al usuario             |
+| `promo_type`                         | Number   | Tipo de descuento                 |
+| `promo_value`                        | Number   | El valor nominal de la promoción  |
+| `trip_id`                            | ObjectId | Referencia al viaje               |
+| `user_used_amount`                   | Number   | Monto                             |
+| `user_used_amount_in_admin_currency` | Number   | Monto descontado                  |
+| `created_at`                         | Date     | Fecha de creación                 |
+| `updated_at`                         | Date     | Fecha de la última actualización  |
+
+### Modelo - Wallet_History.js
+
+**Descripción:**
+El modelo diseñado para  mantener la trazabilidad financiera de los pago y cobros por servicios.
+
+| Campo                | Tipo   | Descripción                 |
+| :------------------- | :----- | :-------------------------- |
+| `from_amount`        | Number | Monto                       |
+| `from_currency_code` | String | Código de moneda            |
+| `to_currency_code`   | String | Código de moneda de destino |
+| `current_rate`       | Number | Tasa de cambio              |
+| `wallet_status`      | Number | Estatus                     |
+### Modelo - Zone_Value.js
+
+**Descripción:**
+El modelo se utiliza para aplicar una **tarifa plana** entre dos puntos geográficos.
+
+| Campo                        | Tipo     | Default  | Descripción                                                |
+| :--------------------------- | :------- | :------- | :--------------------------------------------------------- |
+| `cityid`                     | ObjectId | -        | Referencia de la ciudad                                    |
+| `service_type_id`            | ObjectId | -        | ID de la categoría de servicio                             |
+| `from`                       | ObjectId | -        | ID de la zona de origen                                    |
+| `to`                         | ObjectId | -        | ID de la zona de destino                                   |
+| `amount`                     | Number   | 0        | Tarifa plana/fija para el trayecto entre estas zonas.      |
+| `partner_profit_fees`        | Number   | 0        | Valor de la ganancia para el socio/proveedor.              |
+| `partner_profit_type`        | Number   | -        | Tipo de ganancia                                           |
+| `model_id`                   | Array    | `[]`     | Lista de modelos de vehículos permitidos para esta tarifa. |
+| `cost_per_helper`            | Number   | -        | Costo adicional por ayudante en esta ruta.                 |
+| `night_shift`                | Number   | 0        | Recargo por turno nocturno.                                |
+| `boat_ticket`                | Number   | 0        |                                                            |
+| `cost_per_stop_inside_city`  | Number   | 0        |                                                            |
+| `cost_per_stop_outside_city` | Number   | 0        |                                                            |
+| `ti_zone`                    | Number   | -        |                                                            |
+| `created_at`                 | Date     | Date.now | Fecha de creación de la tarifa.                            |
+| `updated_at`                 | Date     | Date.now | Fecha de la última actualización.                          |
+
+
+
+
+
