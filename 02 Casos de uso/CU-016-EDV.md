@@ -53,7 +53,7 @@ Este caso de uso describe el procedimiento para modificar los datos básicos de 
 ---
 
 ## 🔗 Casos de Uso Relacionados
-* [[CU-007-EST-VIAA]]
+* [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [[CU-008-EST-VIAC]]
 * [[CU-009-EST-VIAF]]
 * [[CU-014-EST-VIAE]]

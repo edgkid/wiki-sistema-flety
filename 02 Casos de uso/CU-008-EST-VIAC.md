@@ -62,7 +62,7 @@ Este caso de uso describe la funcionalidad de consulta y auditoría de los servi
 ---
 
 ## 🔗 Casos de Uso Relacionados
-* [[CU-004-EST-EST|⬅️ Volver a Dashboard General]]
+* [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 * [[CU-007-EST-VIAA]]
 * [[CU-015-MAP]]
 * [[CU-016-EDV]]

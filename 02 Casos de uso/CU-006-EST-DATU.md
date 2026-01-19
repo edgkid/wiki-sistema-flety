@@ -57,9 +57,9 @@ Este caso de uso describe la visualización de las métricas demográficas y de 
 ---
 
 ## 🔗 Casos de Uso Relacionados
-* [[CU-004-EST-EST|⬅️ Volver a Dashboard General]]
-* [[CU-005-EST-DATF]] 
-* [[CU-007-EST-VIAA]] 
+* [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
+* [CU-005-EST-DATF](02%20Casos%20de%20uso/CU-005-EST-DATF.md) 
+* [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [[CU-008-EST-VIAC]]
 * [[CU-009-EST-VIAF]] 
 * [[CU-010-EST-HIT]] 

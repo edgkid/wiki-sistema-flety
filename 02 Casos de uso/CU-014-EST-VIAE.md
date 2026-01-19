@@ -61,13 +61,13 @@ Este caso de uso describe la funcionalidad de supervisión de los viajes entrant
 ---
 
 ## 🔗 Casos de Uso Relacionados
-* * [[CU-004 - Dashboard]]
+* [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 * [[CU-009-EST-VIAF]]
 * [[CU-015-MAP]]
 * [[CU-016-EDV]]
-* [[CU-005-EST-DATF]] 
-* [[CU-006-EST-DATU]] 
-* [[CU-007-EST-VIAA]]
+* [CU-005-EST-DATF](02%20Casos%20de%20uso/CU-005-EST-DATF.md) 
+* [CU-006-EST-DATU](02%20Casos%20de%20uso/CU-006-EST-DATU.md) 
+* [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [[CU-008-EST-VIAC]] 
 * [[CU-010-EST-HIT]] 
 * [[CU-011-EST-RES]]

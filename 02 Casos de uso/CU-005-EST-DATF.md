@@ -59,9 +59,9 @@ Este caso de uso describe la visualización de la pantalla principal de indicado
 
 ## 🔗 Casos de Uso Relacionados (Módulo Estadístico)
 * [[CU-001-Usuarios|⬅️ Volver a Gestión de Usuarios]]
-* [[CU-004 - Dashboard]]
-* [[CU-006-EST-DATU]]
-* [[CU-007-EST-VIAA]] 
+* [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
+* [CU-006-EST-DATU](02%20Casos%20de%20uso/CU-006-EST-DATU.md)
+* [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [[CU-008-EST-VIAC]] 
 * [[CU-009-EST-VIAF]]
 * [[CU-010-EST-HIT]] 
