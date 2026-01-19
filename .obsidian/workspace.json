@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7eea830859863a23",
+        "id": "1ba66c80ae66af19",
         "type": "tabs",
         "children": [
           {
-            "id": "c966e2213b99447c",
+            "id": "9d3208cc6ed6eb26",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -179,12 +179,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "c966e2213b99447c",
+  "active": "9d3208cc6ed6eb26",
   "lastOpenFiles": [
-    "02 Casos de uso/CU-001-Usuarios.md",
-    "02 Casos de uso/Casos de Uso.md",
-    "02 Casos de uso/CU-004 - Dashboard.md",
+    "02 Casos de uso/CU-010-EST-HIT.md",
     "_sidebar.md",
+    "02 Casos de uso/CU-004 - Dashboard.md",
+    "02 Casos de uso/Casos de Uso.md",
+    "02 Casos de uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso",
     "Casos de Uso",
@@ -201,7 +202,6 @@
     "02 Casos de uso/CU-013-EST-BILL.md",
     "02 Casos de uso/CU-012-EST-MOC.md",
     "02 Casos de uso/CU-011-EST-RES.md",
-    "02 Casos de uso/CU-010-EST-HIT.md",
     "02 Casos de uso/CU-009-EST-VIAF.md",
     "02 Casos de uso/CU-008-EST-VIAC.md",
     "02 Casos de uso/CU-007-EST-VIAA.md",
