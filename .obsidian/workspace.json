@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Código/Controller-Principal/Emergency_Contact.md",
+                "file": "04 Código/Controller-Principal/Country.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Emergency_Contact"
+              "title": "Country"
             }
           }
         ]
@@ -185,8 +185,11 @@
   },
   "active": "bfe6c6a2aa579562",
   "lastOpenFiles": [
-    "04 Código/Controller-Principal/Provider_Analytics.md",
+    "04 Código/Controller-Principal/Crons.md",
+    "04 Código/Controller-Principal/Country.md",
+    "04 Código/Controller-Principal/Emails.md",
     "04 Código/Controller-Principal/Emergency_Contact.md",
+    "04 Código/Controller-Principal/Provider_Analytics.md",
     "04 Código/Controller-Principal/Provider_Earning.md",
     "04 Código/Controller-Principal/Shedule_Trip.md",
     "04 Código/Controller-Principal/User.md",
@@ -213,9 +216,6 @@
     "02 Casos de uso/Casos de Uso/CU-001-Usuarios.md",
     "02 Casos de uso/Casos de Uso",
     "Casos de Uso",
-    "README.md",
-    "02 Casos de uso/CU-016-EDV.md",
-    "02 Casos de uso/CU-015-MAP.md",
     "02 Casos de uso",
     "04 Código",
     "03 API's",
