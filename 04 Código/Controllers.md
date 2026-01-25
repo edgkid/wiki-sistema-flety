@@ -26,3 +26,5 @@ Carpeta Corporate Controllers
 [Corporate_Payments.js](04%20Código/Corporate_Controller/Corporate_Payments.md)
 [Corporate_Static_Api.js](04%20Código/Corporate_Controller/Corporate_Static_Api.md)
 
+Carpeta Admin Controllers
+[Weekly_Earning.js](04%20Código/Admin_Controller/Weekly_Earning.md)

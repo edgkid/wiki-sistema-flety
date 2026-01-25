@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Código/Corporate_Controller/Corporate_Static_API.md",
+                "file": "04 Código/Admin_Controller/Weekly_Earning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Corporate_Static_API"
+              "title": "Weekly_Earning"
             }
           }
         ]
@@ -186,11 +186,12 @@
   "active": "e7794e352c9b3d13",
   "lastOpenFiles": [
     "04 Código/Controllers.md",
+    "04 Código/Admin_Controller/Weekly_Earning.md",
+    "04 Código/Corporate_Controller/Corporate_Static_API.md",
     "04 Código/Corporate_Controller/Corporate_Api.md",
     "04 Código/Corporate_Controller/Corporate_Payments.md",
     "04 Código/Coporate_Controller/Corporate_Api.md",
     "04 Código/Coporate_Controller",
-    "04 Código/Corporate_Controller/Corporate_Static_API.md",
     "04 Código/Controller-Principal/Wallet_History.md",
     "04 Código/Corporate_Controller",
     "04 Código/Admin_Controller",
@@ -214,7 +215,6 @@
     "04 Código/Controller-Principal/UserDocument.md",
     "02 Casos de uso/Controller-Principal/Trip.md",
     "02 Casos de uso/Controller-Principal",
-    "02 Casos de uso/Controller-Principañ/Trip.md",
     "02 Casos de uso/Controller-Principañ",
     "04 Código/Controller-Principal",
     "02 Casos de uso/Casos de Uso",
