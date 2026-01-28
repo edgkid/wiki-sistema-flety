@@ -28,3 +28,9 @@ Carpeta Corporate Controllers
 
 Carpeta Admin Controllers
 [Weekly_Earning.js](04%20Código/Admin_Controller/Weekly_Earning.md)
+[Request.js](04%20Código/Admin_Controller/Request.md)
+[Review.js](04%20Código/Admin_Controller/Review.md)
+[Shedule.js](04%20Código/Admin_Controller/Shedule.md)
+[Send_Mass_Notifications.js](04%20Código/Admin_Controller/Send_Mass_Notifications.md)
+[Service_Specifications.js](04%20Código/Admin_Controller/Service_Specifications.md)
+[Service_Type.js](04%20Código/Admin_Controller/Service_Type.md)
