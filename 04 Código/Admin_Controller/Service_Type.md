@@ -1,7 +1,7 @@
 # Archivo: `Service_Type.js`
 
 ## Descripción General
-Este controlador gestiona las Categorías de Vehículos y Servicios de la plataforma. 
+Este controlador gestiona las categorías de vehículos y servicios de la plataforma. 
 
 ---
 

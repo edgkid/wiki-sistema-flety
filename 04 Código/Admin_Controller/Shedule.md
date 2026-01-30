@@ -1,7 +1,7 @@
 # Archivo: `Shedule.js`
 
 ## Descripción General
-Este controlador se encarga de la gestión de los **Viajes Programados . Su función principal es administrar las solicitudes de servicios que los usuarios han reservado  y que aún no han sido convertidas en viajes activos.
+Este controlador se encarga de la gestión de los viajes programados . Su función principal es administrar las solicitudes de servicios que los usuarios han reservado  y que aún no han sido convertidas en viajes activos.
 
 ---
 

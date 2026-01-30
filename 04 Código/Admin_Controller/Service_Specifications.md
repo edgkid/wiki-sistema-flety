@@ -1,7 +1,7 @@
 # Archivo: `Service_Specifications.js`
 
 ## Descripción General
-Este controlador gestiona las **Especificaciones de Servicio**, que actúan como atributos o características adicionales asignables a los vehículos.
+Este controlador gestiona las especificaciones de servicio, que actúan como atributos o características adicionales asignables a los vehículos.
 
 ---
 

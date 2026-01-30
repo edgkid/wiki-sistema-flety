@@ -1,7 +1,7 @@
 # Archivo: `Send_Mass_Notifications.js`
 
 ## Descripción General
-Este controlador gestiona el **Motor de Notificaciones Masivas** de la plataforma. 
+Este controlador gestiona las notificaciones masivas de la plataforma. 
 
 ---
 
