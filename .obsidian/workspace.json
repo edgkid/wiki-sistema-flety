@@ -13,12 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "04 Código/Routes.md",
+=======
+                "file": "04 Código/Views_Routes.md",
+>>>>>>> 9a2b77b47056287163af70be1f8cb0fd44ce2d85
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "Routes"
+=======
+              "title": "Views_Routes"
+>>>>>>> 9a2b77b47056287163af70be1f8cb0fd44ce2d85
             }
           }
         ]
@@ -185,6 +193,7 @@
   },
   "active": "fc9a36a05a5b307a",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "_sidebar.md",
     "Pasted image 20260202093133.png",
     "Pasted image 20260202092837.png",
@@ -220,6 +229,40 @@
     "04 Código/Admin_Controller/User.md",
     "04 Código/Admin_Controller/Type_Services.md",
     "log.json",
+=======
+    "Pasted image 20260201230944.png",
+    "04 Código/Admin_Controller/Service_Type.md",
+    "04 Código/Views_Routes.md",
+    "04 Código/Provider_Controller/Trip.md",
+    "04 Código/Provider_Controller/Provider.md",
+    "04 Código/Provider_Controller/Payment.md",
+    "04 Código/Provider_Controller",
+    "04 Código/Admin_Controller/Partner.md",
+    "04 Código/Admin_Controller/Map_View.md",
+    "04 Código/Admin_Controller/Languages.md",
+    "04 Código/Admin_Controller/Inbox_Notifications.md",
+    "04 Código/Admin_Controller/Guest_Token.md",
+    "04 Código/Admin_Controller/Ferry_Ticket.md",
+    "04 Código/Admin_Controller/Email_Detail.md",
+    "04 Código/Admin_Controller/Documents.md",
+    "04 Código/Admin_Controller/Dispatcher.md",
+    "04 Código/Admin_Controller/Dashboard.md",
+    "04 Código/Admin_Controller/Daily_Earning.md",
+    "04 Código/Admin_Controller/Country.md",
+    "04 Código/Admin_Controller/Corporate_Admin.md",
+    "04 Código/Admin_Controller/City_Service.md",
+    "04 Código/Admin_Controller/City.md",
+    "04 Código/Admin_Controller/Bank_Detail.md",
+    "04 Código/Admin_Controller/Admin_Partner_Weekly_Earning.md",
+    "04 Código/Controllers.md",
+    "04 Código/Admin_Controller/Service_Specifications.md",
+    "04 Código/Admin_Controller/Send_Mass_Notifications.md",
+    "04 Código/Coporate_Controller",
+    "04 Código/Corporate_Controller",
+    "04 Código/Admin_Controller",
+    "02 Casos de uso/Controller-Principal",
+    "02 Casos de uso/Controller-Principañ",
+>>>>>>> 9a2b77b47056287163af70be1f8cb0fd44ce2d85
     "04 Código/Controller-Principal",
     "02 Casos de uso/Casos de Uso",
     "Casos de Uso",
