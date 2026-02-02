@@ -63,9 +63,9 @@ Este caso de uso describe la funcionalidad de consulta y auditoría de los servi
 
 ## 🔗 Casos de Uso Relacionados
 * [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
-* [[CU-007-EST-VIAA]]
-* [[CU-015-MAP]]
-* [[CU-016-EDV]]
+* [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
+* [CU-015-MAP](02%20Casos%20de%20uso/CU-015-MAP.md)
+* [CU-016-EDV](02%20Casos%20de%20uso/CU-016-EDV.md)
 * [CU-009-EST-VIAF](02%20Casos%20de%20uso/CU-009-EST-VIAF.md) 
-* [[CU-010-EST-HIT]] 
-* [[CU-013-EST-BILL]]
+* [CU-010-EST-HIT](02%20Casos%20de%20uso/CU-010-EST-HIT.md)  
+* [CU-013-EST-BILL](02%20Casos%20de%20uso/CU-013-EST-BILL.md)

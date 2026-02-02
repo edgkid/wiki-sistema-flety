@@ -65,5 +65,5 @@ Este caso de uso describe la funcionalidad de supervisión y planificación de s
 * [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
 * [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md) 
-* [[CU-015-MAP]]
-* [[CU-016-EDV]]
+* [CU-015-MAP](02%20Casos%20de%20uso/CU-015-MAP.md)
+* [CU-016-EDV](02%20Casos%20de%20uso/CU-016-EDV.md)

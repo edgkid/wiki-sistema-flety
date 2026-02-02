@@ -62,8 +62,8 @@ Este caso de uso describe la visualización de las métricas demográficas y de 
 * [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md) 
 * [CU-009-EST-VIAF](02%20Casos%20de%20uso/CU-009-EST-VIAF.md)
-* [[CU-010-EST-HIT]] 
-* [[CU-011-EST-RES]]
-* [[CU-012-EST-MOC]] 
-* [[CU-013-EST-BILL]] 
-* [[CU-014-EST-VIAE]]
+* [CU-010-EST-HIT](02%20Casos%20de%20uso/CU-010-EST-HIT.md)  
+* [CU-011-EST-RES](02%20Casos%20de%20uso/CU-011-EST-RES.md)
+* [CU-012-EST-MOC](02%20Casos%20de%20uso/CU-012-EST-MOC.md) 
+* [CU-013-EST-BILL](02%20Casos%20de%20uso/CU-013-EST-BILL.md) 
+* [CU-014-EST-VIAE](02%20Casos%20de%20uso/CU-014-EST-VIAE.md)

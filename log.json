@@ -1,0 +1,51 @@
+11:28:34,447 ERROR [com.banplus.fuse.business.notificar.transacciones.generales.adapter.DBAdapterBean] (ForkJoinPool-506463-worker-1) Transaccion
+{
+    merchantName='MovilPay', 
+    url='http://10.55.220.2/api/payments/company_banks/', 
+    urlTraductor='/proxy/traductor/gnetwork/rest/envioGnetwork', 
+    idTransaccion=80821, 
+    merchant=5, 
+    empresa=2015, 
+    tipoTransaccion='C2P', 
+    transaccion=674915, 
+    motivo=0, 
+    descripcion='Pago Móvil Comercio', 
+    codigoMoneda=1, 
+    bancoOrigen='0174', 
+    bancoDestino='0102', 
+    ctaOrigen='01740000000000000000', 
+    ctaDestino='01020000000000000000', 
+    tipoIdCliente='V', 
+    idCliente='12345678', 
+    nombreCliente='CLIENTE PRUEBA 1', 
+    telefono='04141234567', 
+    email='prueba1@gmail.com', 
+    referencia='674915', 
+    operacion='C', 
+    montoTransaccion=1500.00, 
+    descTransaccion='', 
+    fechaHoraTransaccion='2026-01-23 11:28:33.000', 
+    fechaHoraCarga='2026-01-23 11:28:34.447', 
+    estatus=1, reproceso=0, 
+    fechaEnvio='2026-01-23', 
+    horaEnvio='11:28:34', estatusEnvio=1
+    }
+11:28:34,447 ERROR [com.banplus.fuse.business.notificar.transacciones.generales.adapter.DBAdapterBean] (ForkJoinPool-506463-worker-1) INSERT INTO RepositorioAT.dbo.ServicioIntegral_Transaccion (IDTRAN, CODPRO, IDMERC, IDEMPR, TIPOTRA, IDTRANSACCION, MOTIVO, DESCRIPCION, CODMON, BANCO_ORIGEN, BANCO_DESTINO, CTA_ORIGEN, CTA_DESTINO, TIPO_ID_CLIENTE, ID_CLIENTE, NOMBRE_CLIENTE, TELEFONO, EMAIL, REFERENCIA, TIPO_OPERACION, MONTO, DESCRIPCION_OPERACION, FECHA_HORA, FECHA_CARGA, ESTATUS, REPROCESO, FECHA_ENVIO, HORA_ENVIO, ESTATUS_ENVIO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13:28:43,369 ERROR [com.banplus.fuse.business.notificar.transacciones.generales.adapter.DBAdapterBean] (ForkJoinPool-509749-worker-1) Transaccion{merchantName='MovilPay', url='http://10.55.220.2/api/payments/company_banks/', urlTraductor='/proxy/traductor/gnetwork/rest/envioGnetwork', idTransaccion=81054, merchant=5, empresa=2015, tipoTransaccion='C2P', transaccion=694461, motivo=0, descripcion='Pago Móvil Comercio', codigoMoneda=1, bancoOrigen='0174', bancoDestino='0134', ctaOrigen='01740000000000000000', ctaDestino='01340000000000000000', tipoIdCliente='V', idCliente='87654321', nombreCliente='CLIENTE PRUEBA 2', telefono='04247654321', email='prueba2@outlook.com', referencia='694461', operacion='C', montoTransaccion=2850.50, descTransaccion='', fechaHoraTransaccion='2026-01-23 13:26:54.000', fechaHoraCarga='2026-01-23 13:28:43.369', estatus=1, reproceso=0, fechaEnvio='2026-01-23', horaEnvio='13:28:43', estatusEnvio=1}
+13:28:43,369 ERROR [com.banplus.fuse.business.notificar.transacciones.generales.adapter.DBAdapterBean] (ForkJoinPool-509749-worker-1) INSERT INTO RepositorioAT.dbo.ServicioIntegral_Transaccion (IDTRAN, CODPRO, IDMERC, IDEMPR, TIPOTRA, IDTRANSACCION, MOTIVO, DESCRIPCION, CODMON, BANCO_ORIGEN, BANCO_DESTINO, CTA_ORIGEN, CTA_DESTINO, TIPO_ID_CLIENTE, ID_CLIENTE, NOMBRE_CLIENTE, TELEFONO, EMAIL, REFERENCIA, TIPO_OPERACION, MONTO, DESCRIPCION_OPERACION, FECHA_HORA, FECHA_CARGA, ESTATUS, REPROCESO, FECHA_ENVIO, HORA_ENVIO, ESTATUS_ENVIO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)

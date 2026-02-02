@@ -56,4 +56,4 @@ Este caso de uso describe el procedimiento para modificar los datos básicos de 
 * [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md)
 * [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md) 
 * [CU-009-EST-VIAF](02%20Casos%20de%20uso/CU-009-EST-VIAF.md)
-* [[CU-014-EST-VIAE]]
+* [CU-014-EST-VIAE](02%20Casos%20de%20uso/CU-014-EST-VIAE.md)

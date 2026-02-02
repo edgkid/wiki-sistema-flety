@@ -63,10 +63,10 @@ Este caso de uso describe la funcionalidad de consulta global del histórico de 
 
 ## 🔗 Casos de Uso Relacionados
 * [Estadísticas (CU-004)](02%20Casos%20de%20uso/CU-004%20-%20Dashboard.md)
-* [[CU-007-EST-VIAA]] 
+* [CU-007-EST-VIAA](02%20Casos%20de%20uso/CU-007-EST-VIAA.md) 
 * [CU-008-EST-VIAC](02%20Casos%20de%20uso/CU-008-EST-VIAC.md) 
-* [[CU-015-MAP]]
-* [[CU-016-EDV]]
-* [[CU-011-EST-RES]] 
-* [[CU-012-EST-MOC]] 
-* [[CU-013-EST-BILL]]
+* [CU-015-MAP](02%20Casos%20de%20uso/CU-015-MAP.md)
+* [CU-016-EDV](02%20Casos%20de%20uso/CU-016-EDV.md)
+* [CU-011-EST-RES](02%20Casos%20de%20uso/CU-011-EST-RES.md) 
+* [CU-012-EST-MOC](02%20Casos%20de%20uso/CU-012-EST-MOC.md) 
+* [CU-013-EST-BILL](02%20Casos%20de%20uso/CU-013-EST-BILL.md)

@@ -1,0 +1,50 @@
+## Caso de Uso: CU-093-CONF-EDUS - Editar datos de usuario
+
+### 📋 Información General
+
+| Sección | Descripción |
+| :--- | :--- |
+| **id** | CU-093-CONF-EDUS |
+| **Caso de Uso** | Editar datos de usuario |
+| **Actor Principal** | Usuario |
+| **Actores Secundarios** | Software |
+| **Objetivo** | Permite editar el registro de un usuario existente. |
+| **Prioridad** | |
+
+---
+
+### 🛠️ Precondiciones del Sistema
+* El usuario inicia sesión de forma exitosa CU-001-ADM / CU-001-CLI.
+* El usuario cuenta con el rol y los permisos pertinentes.
+* El usuario hizo clic en editar usuario desde **CU-091-CONF-USER**.
+
+---
+
+### 🔄 Flujo del Sistema
+
+| Actor principal (usuario) | Actor Secundario (sistema) |
+| :--- | :--- |
+| | El sistema presenta un formulario con los datos precargados y requeridos de un usuario del sistema. |
+| El usuario puede actualizar la siguiente información: nombre, tipo, país, email y contraseña. Presiona guardar. | |
+| | El sistema deja persistencia de los datos. |
+| | El sistema redirige a **CU-091-CONF-USER**. |
+| **Fin** | |
+
+---
+
+### 🔀 Flujo alternativo del sistema
+N/A
+
+---
+
+### ✅ Post Condición del sistema
+
+| Escenario | Resultado |
+| :--- | :--- |
+| **Éxito** | Los datos de los usuario y la lista se actualizan inmediatamente. |
+| **Fallo** | |
+
+---
+
+### 🔗 CU - Relacionado
+* [CU-091-CONF-USER](02%20Casos%20de%20uso/CU-091-CONF-USER.md)
