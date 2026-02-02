@@ -2,10 +2,10 @@
 El sistema de rutas funge como interfaz de entrada permitiendo el  _mapping_ entre las peticiones del usuario bajo un contexto  HTTP (GET, POST, PUT, DELETE) y una URL Hacia la logica de los controladores, modelos y services.
 
 # Flujo de  una solicitud
-![Flujo de solicitud](../../Pasted%20image%2020260202093133.png)
+![Flujo de solicitud](../Pasted%20image%2020260202093133.png)
 
 # Recursos que ejecutan una solicitud
-![[Pasted image 20260202092310.png]]
+![Recursos de solicitud](../Pasted%20image%2020260202092310.png)
 
 # Listado de Rutas Generales 
 
