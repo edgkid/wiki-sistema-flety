@@ -299,3 +299,16 @@ Las Respuesta de error está siendo manejadas de la siguiente manera; dentro del
 A continuación se detallan las especificaciones técnicas de los endpoints disponibles:
 
 * [🔐 Ver Swagger: Autenticación de Usuario (Login)](03%20API's/Login%20Swagger.md)
+
+Usuarios
+[user-trip-detail](03%20API's/Swagger/Usuarios/user-trip-detail-sw.md)
+[get-user-invoice](03%20API's/Swagger/Usuarios/get-user-invoice-sw.md)
+[get-emergency-contact](03%20API's/Swagger/Usuarios/get-emergency-contact-sw.md)
+[get-favorite-provider](03%20API's/Swagger/Usuarios/get-favorite-provider-sw.md)
+[get-country](03%20API's/Swagger/Usuarios/get-country-sw.md)
+[get-home-address](03%20API's/Swagger/Usuarios/get-home-address-sw.md)
+[get-lista-tarjetas-pago-wallet](03%20API's/Swagger/Usuarios/get-lista-tarjetas-pago-wallet-sw.md)
+[get-otp](03%20API's/Swagger/Usuarios/get-otp-sw.md)
+[get-provider-long](03%20API's/Swagger/Usuarios/get-provider-lat-long-sw.md)
+[get-referal-credit](03%20API's/Swagger/Usuarios/get-referal-credit-sw.md)
+[get-user-document](03%20API's/Swagger/Usuarios/get-user-document-sw.md)
