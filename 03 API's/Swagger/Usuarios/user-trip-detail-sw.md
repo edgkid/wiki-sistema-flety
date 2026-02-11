@@ -1,4 +1,4 @@
-### Obtener Detalle de Viaje
+### Obtener Detalle de Viaje de Usuario
 
 ```json
 {
