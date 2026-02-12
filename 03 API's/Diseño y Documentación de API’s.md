@@ -345,3 +345,14 @@ Proveedor
 [create-provider](03%20API's/Swagger/Providers/create-provider-sw.md)
 [get-provider-docuemnt](03%20API's/Swagger/Providers/get-provider-docuemnt-sw.md)
 [get-provider-detail](03%20API's/Swagger/Providers/get-provider-detail-sw.md)
+
+
+[get-provider-vehicle-detail](03%20API's/Swagger/Providers/get-provider-vehicle-detail-sw.md)
+[upload-vehicle-document](03%20API's/Swagger/Providers/upload-vehicle-document-sw.md)
+[change-current-vehicle](03%20API's/Swagger/Providers/change-current-vehicle-sw.md)
+[get-provider-setting-detail](03%20API's/Swagger/Providers/get-provider-setting-detail-sw.md)
+[update-provider-setting](03%20API's/Swagger/Providers/update-provider-setting-sw.md)
+[change-active-status](03%20API's/Swagger/Providers/change-active-status-sw.md)
+
+
+
