@@ -1,35 +1,35 @@
-### Actualizar Vehículo Activo de Proveedor
+### Eliminar Detalle Banco
 
 ```json
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Vehicle Management API",
-    "description": "API para Actualiza el vehículo activos de proveedores.",
+    "title": "Banking Management API",
+    "description": "API para la gestión y eliminación de métodos de pago y cuentas bancarias asociadas al proveedor.",
     "version": "1.0.0"
   },
   "paths": {
-    "/change_current_vehicle": {
+    "/delete_bank_detail": {
       "post": {
-        "summary": "Cambiar vehículo actual",
-        "description": "Actualiza el vehículo activo para el proveedor especificado.",
+        "summary": "Eliminar detalles bancarios",
+        "description": "Elimina de forma permanente la configuración bancaria y la vinculación con la pasarela de pagos para el proveedor especificado.",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ChangeVehicleRequest"
+                "$ref": "#/components/schemas/DeleteBankDetailRequest"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Cambio realizado con éxito",
+            "description": "Cuenta bancaria eliminada con éxito",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SimpleSuccessResponse"
+                  "$ref": "#/components/schemas/GenericSuccessResponse"
                 }
               }
             }
@@ -40,29 +40,26 @@
   },
   "components": {
     "schemas": {
-      "ChangeVehicleRequest": {
+      "DeleteBankDetailRequest": {
         "type": "object",
+        "required": [
+          "provider_id",
+          "token"
+        ],
         "properties": {
           "provider_id": {
             "type": "string",
+            "description": "ID único del proveedor.",
             "example": "{{PROVIDER_ID}}"
           },
           "token": {
             "type": "string",
+            "description": "Token de autenticación de la sesión activa.",
             "example": "{{PROVIDER_TOKEN}}"
-          },
-          "vehicle_id": {
-            "type": "string",
-            "example": "61979c72e096a97e07f0df06"
           }
-        },
-        "required": [
-          "provider_id",
-          "token",
-          "vehicle_id"
-        ]
+        }
       },
-      "SimpleSuccessResponse": {
+      "GenericSuccessResponse": {
         "type": "object",
         "properties": {
           "success": {
@@ -74,4 +71,5 @@
     }
   }
 }
+
 ```

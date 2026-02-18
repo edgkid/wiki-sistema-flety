@@ -1,35 +1,35 @@
-### Cambio de Estatus de Disponibilidad del Proveedor
+### Actualizar Token de Firebase
 
 ```json
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Provider State API",
-    "description": "API para alternar el estado de disponibilidad (Online/Offline) del proveedor.",
+    "title": "Notifications & Device API",
+    "description": "API para la gestión de tokens de dispositivos y configuración de notificaciones push para proveedores.",
     "version": "1.0.0"
   },
   "paths": {
-    "/togglestate": {
+    "/updateproviderdevicetoken": {
       "post": {
-        "summary": "Cambiar estado de disponibilidad",
-        "description": "Permite al proveedor ponerse en línea o fuera de línea mediante el flag is_active.",
+        "summary": "Actualizar token de dispositivo",
+        "description": "Actualiza el token del dispositivo asociado al proveedor para asegurar la entrega de notificaciones push.",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ToggleStateRequest"
+                "$ref": "#/components/schemas/UpdateDeviceTokenRequest"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Estado actualizado exitosamente",
+            "description": "Token actualizado correctamente",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ToggleStateResponse"
+                  "$ref": "#/components/schemas/UpdateDeviceTokenResponse"
                 }
               }
             }
@@ -40,12 +40,12 @@
   },
   "components": {
     "schemas": {
-      "ToggleStateRequest": {
+      "UpdateDeviceTokenRequest": {
         "type": "object",
         "required": [
           "provider_id",
           "token",
-          "is_active"
+          "device_token"
         ],
         "properties": {
           "provider_id": {
@@ -56,15 +56,14 @@
             "type": "string",
             "example": "{{PROVIDER_TOKEN}}"
           },
-          "is_active": {
-            "type": "integer",
-            "enum": [0, 1],
-            "description": "0 para Offline, 1 para Online",
-            "example": 1
+          "device_token": {
+            "type": "string",
+            "description": "El nuevo token generado por el servicio de notificaciones (FCM, APNs, etc.).",
+            "example": "new_device_token"
           }
         }
       },
-      "ToggleStateResponse": {
+      "UpdateDeviceTokenResponse": {
         "type": "object",
         "properties": {
           "success": {
@@ -73,11 +72,8 @@
           },
           "message": {
             "type": "string",
-            "example": "26"
-          },
-          "is_active": {
-            "type": "integer",
-            "example": 1
+            "description": "Código de éxito (50 indica actualización exitosa).",
+            "example": "50"
           }
         }
       }
