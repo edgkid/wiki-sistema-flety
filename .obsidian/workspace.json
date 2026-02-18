@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 API's/Swagger/Providers/set-trip-status-sw.md",
+                "file": "03 API's/Diseño y Documentación de API’s.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "set-trip-status-sw"
+              "title": "Diseño y Documentación de API’s"
             }
           }
         ]
@@ -185,32 +185,33 @@
   },
   "active": "409cd930f566f08c",
   "lastOpenFiles": [
-    "03 API's/Swagger/Providers/typelist-selectedcountrycity-sw.md",
-    "03 API's/Swagger/Providers/set-trip-status-sw.md",
+    "03 API's/Swagger/Common/get-stripe-intent-sw.md",
+    "03 API's/Swagger/Common/get-stripe-add-card-intent-sw.md",
     "03 API's/Diseño y Documentación de API’s.md",
+    "03 API's/Swagger/Common/get-fare-estimate-sw.md",
+    "03 API's/Swagger/Common/get-google-map-apps-sw.md",
+    "03 API's/Swagger/Common/set-google-map-apps-sw.md",
+    "03 API's/Swagger/Common/get-language-sw.md",
+    "03 API's/Swagger/Providers/add_bank_detail-sw.md",
+    "03 API's/Swagger/Common/get-lenguage-sw.md",
+    "03 API's/Swagger/Common",
+    "03 API's/Swagger/Providers/provider-trip-history-sw.md",
+    "03 API's/Swagger/Providers/provider-response-list-sw.md",
+    "03 API's/Swagger/Providers/provider-give-rating-sw.md",
+    "03 API's/Swagger/Providers/get-provider-invoice-sw.md",
+    "03 API's/Swagger/Providers/set-trip-status-sw.md",
+    "03 API's/Swagger/Providers/pay-payment-sw.md",
+    "03 API's/Swagger/Providers/provider_referral_code-sw.md",
+    "03 API's/Swagger/Providers/check-destination-sw.md",
+    "03 API's/Swagger/Providers/complete-trip-sw.md",
+    "03 API's/Swagger/Providers/country-city-list-sw.md",
+    "03 API's/Swagger/Providers/typelist-selectedcountrycity-sw.md",
     "03 API's/Swagger/Providers/get-trip-sw.md",
     "03 API's/Swagger/Providers/get-trip-status-provider-sw.md",
-    "03 API's/Swagger/Providers/provider-response-list-sw.md",
     "03 API's/Swagger/Providers/provider-create-trip-sw.md",
     "03 API's/Swagger/Providers/register-verification-sw.md",
     "03 API's/Swagger/Providers/provider-response-listsw.md",
     "03 API's/Swagger/Providers/get_provider_referal_credit-sw.md",
-    "03 API's/Swagger/Providers/update-firebase-token-sw.md",
-    "03 API's/Swagger/Providers/provider_referral_code-sw.md",
-    "03 API's/Swagger/Providers/get_bank_detail-sw.md",
-    "03 API's/Swagger/Providers/delete_bank_detail-sw.md",
-    "03 API's/Swagger/Providers/delete-stripe-card-sw.md",
-    "03 API's/Swagger/Providers/country-city-list-sw.md",
-    "03 API's/Swagger/Providers/forgot-password-sw.md",
-    "03 API's/Swagger/Providers/add_bank_detail-sw.md",
-    "03 API's/Login Swagger.md",
-    "03 API's/Swagger/Usuarios/get-home-address-sw.md",
-    "03 API's/Swagger/Providers/change-active-status-sw.md",
-    "03 API's/Swagger/Providers/change-current-vehicle-sw.md",
-    "03 API's/Swagger/Providers/update-provider-setting-sw.md",
-    "03 API's/Swagger/Providers/upload-vehicle-document-sw.md",
-    "03 API's/Swagger/Providers/get-provider-detail-sw.md",
-    "03 API's/Swagger/Providers/get-provider-setting-detail-sw.md",
     "03 API's/Swagger/Providers",
     "03 API's/Swagger/Usuarios",
     "03 API's/Swagger",
@@ -220,7 +221,6 @@
     "04 Código/Corporate_Controller",
     "04 Código/Admin_Controller",
     "02 Casos de uso/Controller-Principal",
-    "02 Casos de uso/Controller-Principañ",
-    "04 Código/Controller-Principal"
+    "02 Casos de uso/Controller-Principañ"
   ]
 }

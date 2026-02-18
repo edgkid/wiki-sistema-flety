@@ -318,4 +318,24 @@ Proveedores
 [provider-response-list](03%20API's/Swagger/Providers/provider-response-list-sw.md)
 [get-trip](03%20API's/Swagger/Providers/get-trip-sw.md)
 [set-trip-status](03%20API's/Swagger/Providers/set-trip-status-sw.md)
+[complete-trip](03%20API's/Swagger/Providers/complete-trip-sw.md)
+[check-destination](03%20API's/Swagger/Providers/check-destination-sw.md)
+[pay-payment](03%20API's/Swagger/Providers/pay-payment-sw.md)
+[get-provider-invoice](03%20API's/Swagger/Providers/get-provider-invoice-sw.md)
+[provider-give-rating](03%20API's/Swagger/Providers/provider-give-rating-sw.md)
+[provider-trip-history](03%20API's/Swagger/Providers/provider-trip-history-sw.md)
+
+
+
+
+Comons
+[get-language](03%20API's/Swagger/Common/get-language-sw.md)
+[get-stripe-add-card-intent](03%20API's/Swagger/Common/get-stripe-add-card-intent-sw.md)
+[get-google-map-apps](03%20API's/Swagger/Common/get-google-map-apps-sw.md)
+[set-google-map-apps](03%20API's/Swagger/Common/set-google-map-apps-sw.md)
+[get-fare-estimate](03%20API's/Swagger/Common/get-fare-estimate-sw.md)
+[get-stripe-intent](03%20API's/Swagger/Common/get-stripe-intent-sw.md)
+
+
+
 
